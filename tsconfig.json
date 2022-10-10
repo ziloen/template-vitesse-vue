@@ -27,7 +27,6 @@
       "ESNext",
       "DOM.Iterable"
     ],
-    "allowJs": true,
     "types": [
       "vite/client",
       "vite-plugin-pages/client",
