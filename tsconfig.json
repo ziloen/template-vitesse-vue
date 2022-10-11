@@ -3,7 +3,7 @@
     "baseUrl": ".",
     "module": "ESNext",
     "target": "ESNext",
-    "jsx": "preserve",
+    // "jsx": "preserve", // volar don't need this after 1.0.0
     // type checking
     "strict": true,
     "noImplicitAny": true,
@@ -37,6 +37,19 @@
         "src/*"
       ]
     }
+  },
+  "vueCompilerOptions": {
+    // vue 版本，默认 3
+    "target": 3,
+    // 严格检查 Component tag 和 Props types
+    "strictTemplates": true,
+    // "jsxTemplates": false,
+    // "skipTemplateCodegen": false,
+    "narrowingTypesInInlineHandlers": true,
+    // 即使不是 scoped 的 style block 中的 class 也跳转
+    // "experimentalResolveStyleCssClasses": "always",
+    // 泛型组件 - ⚠ 实验中！
+    "experimentalRfc436": true
   },
   "exclude": [
     "dist",
