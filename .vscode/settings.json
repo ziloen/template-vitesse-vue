@@ -4,6 +4,16 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    // 从文件列表中隐藏 node_modules (打开内部的文件时会暂时显示)
+    "node_modules": true,
+  },
   "editor.formatOnSave": false,
   "typescript.tsdk": "node_modules/typescript/lib"
 }
