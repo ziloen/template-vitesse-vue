@@ -14,13 +14,13 @@
     "@vueuse/core": "^9.3.0",
     "@wai-ri/core": "^0.0.88",
     "@wai-ri/vue": "^0.0.88",
-    "naive-ui": "^2.33.4",
+    "naive-ui": "^2.33.5",
     "vue": "^3.2.40",
     "vue-router": "^4.1.5"
   },
   "devDependencies": {
     "@iconify-json/carbon": "^1.1.8",
-    "@types/node": "^18.8.3",
+    "@types/node": "^18.8.4",
     "@types/postcss-preset-env": "^7.7.0",
     "@unocss/reset": "^0.45.29",
     "@vitejs/plugin-vue": "^3.1.2",
