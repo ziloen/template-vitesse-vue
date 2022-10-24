@@ -9,3 +9,28 @@ body,
 html.dark {
   background: #121212;
 }
+
+/* @font-face {
+  font-family: "Fira Code";
+  src: local("Fira Code");
+}
+
+code {
+  font-family: "Fira Code";
+  font-feature-settings: on;
+} */
+
+/* 
+PostCSS 支持的 minmax 前缀属性
+    width
+    height
+    device-width
+    device-height
+    aspect-ratio
+    device-aspect-ratio
+    color
+    color-index
+    monochrome
+    resolution
+ */
+/* @media (width >= 700px) { } */

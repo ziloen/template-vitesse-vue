@@ -51,6 +51,11 @@ export default defineConfig({
   css: {
     postcss: {
       plugins: [PostcssPresetEnv({ stage: 2 })]
+    },
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@use "~/styles/variables.scss" as *;`
+      }
     }
   },
 
