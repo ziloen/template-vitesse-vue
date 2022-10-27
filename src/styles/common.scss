@@ -46,3 +46,16 @@
     align-items: stretch;
   }
 }
+
+.w {
+  &-grow {
+    width: min-content;
+    flex-grow: 1;
+  }
+
+  &-stretch {
+    width: stretch;
+    width: -webkit-fill-available;
+    width: -moz-available;
+  }
+}
