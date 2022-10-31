@@ -26,7 +26,8 @@ export default defineConfig({
     ['h-grow', 'h-min grow'],
     ['w-grow', 'h-min grow'],
     ['col', 'flex-col'],
-    ['row', 'flex-row']
+    ['row', 'flex-row'],
+    ['resizable', 'resize overflow-hidden']
   ],
   presets: [
     presetUno(),
