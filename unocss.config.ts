@@ -19,7 +19,7 @@ export default defineConfig({
     /** Grid Area TODO: support grid-area-[name] grid-area-1/2/1/2  (?\d\/){0,3}\d  */
     [/^grid-area-(\d)\/(\d)/, match => {
       const [, m1, m2] = match
-      return { gridRowStart: m1, gridColumnStart: m2 }
+      return { 'grid-row-start': m1, 'grid-column-start': m2 }
     }]
     /** Flex Layout */
     // [/^flex-(center|align)$/, () => ({ display: 'flex' } as CSSProperties)]
