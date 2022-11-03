@@ -15,9 +15,15 @@ const flexKeyword = ['center', 'between', 'align', 'justify', 'center', 'stretch
 type N = CSSProperties
 
 export default defineConfig({
-  // rules: [
-  //   [/^flex-(center|align)$/, () => ({ display: 'flex' } as CSSProperties)]
-  // ],
+  rules: [
+    /** Grid Area TODO: support grid-area-[name] grid-area-1/2/1/2 */
+    [/^grid-area-(\d)\/(\d)/, match => {
+      const [, m1, m2] = match
+      return { gridArea: `${m1} / ${m2}` }
+    }]
+    /** Flex Layout */
+    // [/^flex-(center|align)$/, () => ({ display: 'flex' } as CSSProperties)]
+  ],
   shortcuts: [
     // delete this two line
     ['btn', 'px-4 py-1 rounded inline-block bg-teal-600 text-white cursor-pointer hover:bg-teal-700 disabled:cursor-default disabled:bg-gray-600 disabled:opacity-50'],
