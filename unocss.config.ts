@@ -16,10 +16,10 @@ type N = CSSProperties
 
 export default defineConfig({
   rules: [
-    /** Grid Area TODO: support grid-area-[name] grid-area-1/2/1/2 */
+    /** Grid Area TODO: support grid-area-[name] grid-area-1/2/1/2  (?\d\/){0,3}\d  */
     [/^grid-area-(\d)\/(\d)/, match => {
       const [, m1, m2] = match
-      return { gridArea: `${m1} / ${m2}` }
+      return { gridRowStart: m1, gridColumnStart: m2 }
     }]
     /** Flex Layout */
     // [/^flex-(center|align)$/, () => ({ display: 'flex' } as CSSProperties)]
