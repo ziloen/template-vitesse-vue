@@ -12,9 +12,12 @@
   },
   "dependencies": {
     "@vueuse/core": "^9.4.0",
+    "@vueuse/motion": "2.0.0-beta.12",
+    "@vueuse/rxjs": "^9.4.0",
     "@wai-ri/core": "^0.0.88",
     "@wai-ri/vue": "^0.0.88",
     "naive-ui": "^2.33.5",
+    "rxjs": "^7.5.7",
     "vue": "^3.2.41",
     "vue-router": "^4.1.6"
   },
