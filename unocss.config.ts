@@ -3,8 +3,8 @@ import {
   presetAttributify,
   presetIcons,
   presetUno,
-  presetWebFonts
-  // transformerDirectives,
+  presetWebFonts,
+  transformerDirectives
   // transformerVariantGroup,
 } from 'unocss'
 import type { CSSProperties } from 'vue'
@@ -49,9 +49,10 @@ export default defineConfig({
         mono: 'Fira Code'
       }
     })
+  ],
+  transformers: [
+    /* 支持 @apply 语法 */
+    transformerDirectives()
+    // transformerVariantGroup(),
   ]
-  // transformers: [
-  //   transformerDirectives(),
-  //   transformerVariantGroup(),
-  // ],
 })

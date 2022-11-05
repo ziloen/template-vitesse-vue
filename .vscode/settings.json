@@ -2,9 +2,11 @@
   "prettier.enable": false,
   "editor.codeActionsOnSave": [
     // only sort imports
-    "source.fixAll.eslint",
     "source.sortImports",
     // remove unused imports & sort imports
     // "source.organizeImports": true,
-  ]
+    "source.fixAll.eslint",
+  ],
+  // add @apply to css atDirectives
+  "css.customData": ["./.vscode/css-data.json"],
 }
