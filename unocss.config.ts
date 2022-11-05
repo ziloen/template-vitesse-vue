@@ -51,7 +51,7 @@ export default defineConfig({
     })
   ],
   transformers: [
-    /* 支持 @apply 语法 */
+    /* support @apply */
     transformerDirectives()
     // transformerVariantGroup(),
   ]
