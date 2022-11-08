@@ -9,4 +9,5 @@
   ],
   // add @apply to css atDirectives
   "css.customData": ["./.vscode/css-data.json"],
+  "emmet.extensionsPath": ["./.vscode/emmet"],
 }
