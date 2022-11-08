@@ -1,7 +1,7 @@
 {
   "css": {
     "snippets": {
-      
+      "@m|@media": "@media (700px <= width <= 1400px) {\n\t${0}\n}"
     }
   }
 }
