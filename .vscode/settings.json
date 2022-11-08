@@ -4,7 +4,7 @@
     // only sort imports
     "source.sortImports",
     // remove unused imports & sort imports
-    // "source.organizeImports": true,
+    // "source.organizeImports",
     "source.fixAll.eslint",
   ],
   // add @apply to css atDirectives
