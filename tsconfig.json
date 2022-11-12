@@ -29,7 +29,6 @@
     ],
     "types": [
       "vite/client",
-      "vite-plugin-pages/client",
       "typescript-lib-enhancer"
     ],
     "paths": {
