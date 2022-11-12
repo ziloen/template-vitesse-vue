@@ -6,8 +6,8 @@ import PostcssPresetEnv from 'postcss-preset-env'
 import Unocss from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
+import VueRoute from 'unplugin-vue-router/vite'
 import { defineConfig } from 'vite'
-import Pages from 'vite-plugin-pages'
 
 export default defineConfig({
   resolve: {
@@ -16,12 +16,15 @@ export default defineConfig({
     }
   },
   plugins: [
+    VueRoute({
+      routesFolder: 'src/pages',
+      extensions: ['.vue'],
+      dts: './src/types/typed-router.d.ts'
+    }),
+
     Vue({
       // reactivityTransform: true
     }),
-
-    // https://github.com/hannoeru/vite-plugin-pages
-    Pages(),
 
     // https://github.com/antfu/unplugin-auto-import
     AutoImport({
