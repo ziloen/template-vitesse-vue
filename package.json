@@ -31,8 +31,8 @@
     "@vitejs/plugin-vue": "^3.2.0",
     "@volar-plugins/prettyhtml": "^1.0.3",
     "@vue/test-utils": "^2.2.4",
-    "@ziloen/eslint-config": "^0.0.77",
-    "@ziloen/eslint-config-format": "^0.0.77",
+    "@ziloen/eslint-config": "^0.0.78",
+    "@ziloen/eslint-config-format": "^0.0.78",
     "eslint": "^8.28.0",
     "jsdom": "^20.0.3",
     "postcss": "^8.4.19",
@@ -67,9 +67,6 @@
     },
     "ignorePatterns": [
       "volar.config.js"
-    ],
-    "rules": {
-      "@typescript-eslint/no-floating-promises": "off"
-    }
+    ]
   }
 }

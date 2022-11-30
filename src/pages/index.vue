@@ -10,15 +10,15 @@ function go() {
 
 <template>
   <div>
-    <div i-carbon-campsite text-4xl inline-block />
+    <div class="i-carbon-campsite text-4xl inline-block" />
     <p>
       <a rel="noreferrer" href="https://github.com/antfu/vitesse-lite" target="_blank">Vitesse Lite</a>
     </p>
     <p>
-      <em text-sm op75>Opinionated Vite Starter Template</em>
+      <em class="text-sm op75">Opinionated Vite Starter Template</em>
     </p>
 
-    <div py-4 />
+    <div class="py-4" />
 
     <input
       id="input"
