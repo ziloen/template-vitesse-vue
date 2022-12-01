@@ -3,7 +3,13 @@
   "atDirectives": [
     {
       "name": "@apply",
-      "description": "@apply tailwindcss classes"
+      "description": "@apply tailwindcss classes",
+      "references": [
+        {
+          "name": "tailwind doc",
+          "url": "https://tailwindcss.com/docs/functions-and-directives#apply"
+        }
+      ]
     }
   ]
 }

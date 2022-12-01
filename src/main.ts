@@ -5,7 +5,7 @@ import App from './App.vue'
 
 import '@unocss/reset/tailwind.css'
 import 'uno.css'
-import './styles/common.scss'
+import './styles/atom.scss'
 import './styles/main.css'
 
 const router = createRouter({
