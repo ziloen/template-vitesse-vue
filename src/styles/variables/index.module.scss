@@ -1,5 +1,1 @@
-@use "color.module.scss" as *;
-
-:export {
-  colorPrimary: $primary;
-}
+@forward "color.module.scss";

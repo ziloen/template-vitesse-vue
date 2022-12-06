@@ -1,2 +1,6 @@
 /* forward scss variables */
 @use './variables/index.module.scss' as *;
+
+:export {
+  colorPrimary: $primary;
+}
