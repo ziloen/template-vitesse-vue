@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import SassVars from '~/styles/js.module.scss'
 const userName = ref('')
 
 const router = useRouter()
