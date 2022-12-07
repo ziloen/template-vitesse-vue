@@ -33,8 +33,7 @@ export default defineConfig({
         // 'vue/macros',
         'vue-router',
         '@vueuse/core',
-        { 'ulid': ['ulid'] },
-        { 'motion/vue': ['Motion'] }
+        { 'ulid': ['ulid'] }
       ],
       dts: './src/types/auto-imports.d.ts',
       dirs: [
@@ -45,7 +44,10 @@ export default defineConfig({
 
     // https://github.com/antfu/vite-plugin-components
     Components({
-      dts: './src/types/components.d.ts'
+      dts: './src/types/components.d.ts',
+      resolvers: [
+        name => name === 'Motion' ? { name, from: 'motion/vue' } : undefined
+      ]
     }),
 
     // https://github.com/antfu/unocss
