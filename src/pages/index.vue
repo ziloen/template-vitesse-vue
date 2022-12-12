@@ -19,7 +19,7 @@ function go() {
       <em class="text-sm op75">Opinionated Vite Starter Template</em>
     </p>
 
-    <div class="py-4" />
+    <Motion tag="div" class="py-4" />
 
     <input
       id="input"
