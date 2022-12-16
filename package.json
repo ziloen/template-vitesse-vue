@@ -11,14 +11,14 @@
     "up": "taze major -I"
   },
   "dependencies": {
-    "@vueuse/core": "^9.6.0",
+    "@vueuse/core": "^9.7.0",
     "@vueuse/motion": "2.0.0-beta.12",
-    "@vueuse/rxjs": "^9.6.0",
+    "@vueuse/rxjs": "^9.7.0",
     "@wai-ri/core": "^0.0.89",
     "@wai-ri/vue": "^0.0.89",
     "motion": "^10.15.3",
     "naive-ui": "^2.34.2",
-    "rxjs": "^7.6.0",
+    "rxjs": "^7.8.0",
     "ulid": "^2.3.0",
     "vue": "^3.2.45",
     "vue-router": "^4.1.6"
