@@ -25,7 +25,7 @@
   },
   "devDependencies": {
     "@iconify-json/carbon": "^1.1.11",
-    "@types/node": "18.11.16",
+    "@types/node": "18.11.17",
     "@types/postcss-preset-env": "^7.7.0",
     "@unocss/reset": "^0.47.6",
     "@vitejs/plugin-vue": "4.0.0",
@@ -45,7 +45,7 @@
     "unplugin-auto-import": "^0.12.1",
     "unplugin-vue-components": "^0.22.12",
     "unplugin-vue-router": "^0.2.3",
-    "vite": "4.0.1",
+    "vite": "4.0.2",
     "vitest": "^0.25.8"
   },
   "eslintConfig": {
