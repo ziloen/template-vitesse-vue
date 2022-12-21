@@ -27,7 +27,7 @@
     "@iconify-json/carbon": "^1.1.11",
     "@types/node": "18.11.17",
     "@types/postcss-preset-env": "^7.7.0",
-    "@unocss/reset": "^0.47.6",
+    "@unocss/reset": "^0.48.0",
     "@vitejs/plugin-vue": "4.0.0",
     "@volar-plugins/prettyhtml": "^1.0.3",
     "@vue/test-utils": "^2.2.6",
@@ -41,12 +41,12 @@
     "taze": "^0.8.5",
     "typescript": "^4.9.4",
     "typescript-lib-enhancer": "^1.0.6",
-    "unocss": "^0.47.6",
+    "unocss": "^0.48.0",
     "unplugin-auto-import": "^0.12.1",
     "unplugin-vue-components": "^0.22.12",
     "unplugin-vue-router": "^0.2.3",
     "vite": "4.0.2",
-    "vitest": "^0.26.1"
+    "vitest": "^0.26.2"
   },
   "eslintConfig": {
     "extends": [
