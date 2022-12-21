@@ -11,9 +11,9 @@
     "up": "taze major -I"
   },
   "dependencies": {
-    "@vueuse/core": "^9.7.0",
+    "@vueuse/core": "^9.8.2",
     "@vueuse/motion": "2.0.0-beta.12",
-    "@vueuse/rxjs": "^9.7.0",
+    "@vueuse/rxjs": "^9.8.2",
     "@wai-ri/core": "^0.0.89",
     "@wai-ri/vue": "^0.0.89",
     "motion": "^10.15.3",
@@ -37,8 +37,8 @@
     "jsdom": "^20.0.3",
     "postcss": "^8.4.20",
     "postcss-preset-env": "^7.8.3",
-    "sass": "^1.57.0",
-    "taze": "^0.8.4",
+    "sass": "^1.57.1",
+    "taze": "^0.8.5",
     "typescript": "^4.9.4",
     "typescript-lib-enhancer": "^1.0.6",
     "unocss": "^0.47.6",
@@ -46,7 +46,7 @@
     "unplugin-vue-components": "^0.22.12",
     "unplugin-vue-router": "^0.2.3",
     "vite": "4.0.2",
-    "vitest": "^0.25.8"
+    "vitest": "^0.26.1"
   },
   "eslintConfig": {
     "extends": [
