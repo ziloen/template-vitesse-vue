@@ -21,7 +21,7 @@ code {
 } */
 
 /* 
-PostCSS 支持的 minmax 前缀属性
+PostCSS 支持的 minmax 前缀属性 https://github.com/postcss/postcss-media-minmax#media-feature-names
     width
     height
     device-width
