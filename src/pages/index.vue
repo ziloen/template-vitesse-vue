@@ -33,6 +33,8 @@ function go() {
     <div>
       <button class="m-3 text-sm btn" @click="go">Go</button>
     </div>
+
+    <Counter :initial="0" />
   </div>
 </template>
 

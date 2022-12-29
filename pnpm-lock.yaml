@@ -19,6 +19,7 @@ specifiers:
   jsdom: ^20.0.3
   motion: ^10.15.3
   naive-ui: ^2.34.3
+  pinia: ^2.0.28
   postcss: ^8.4.20
   postcss-preset-env: ^7.8.3
   rxjs: ^7.8.0
@@ -44,6 +45,7 @@ dependencies:
   '@wai-ri/vue': 0.0.90
   motion: 10.15.3
   naive-ui: 2.34.3_vue@3.2.45
+  pinia: 2.0.28_prq2uz4lho2pwp6irk4cfkrxwu
   rxjs: 7.8.0
   ulid: 2.3.0
   vue: 3.2.45
@@ -4469,6 +4471,24 @@ packages:
     resolution: {integrity: sha512-C3FsVNH1udSEX48gGX1xfvwTWfsYWj5U+8/uK15BGzIGrKoUpghX8hWZwa/OFnakBiiVNmBvemTJR5mcy7iPcg==}
     engines: {node: '>=4'}
     dev: true
+
+  /pinia/2.0.28_prq2uz4lho2pwp6irk4cfkrxwu:
+    resolution: {integrity: sha512-YClq9DkqCblq9rlyUual7ezMu/iICWdBtfJrDt4oWU9Zxpijyz7xB2xTwx57DaBQ96UGvvTMORzALr+iO5PVMw==}
+    peerDependencies:
+      '@vue/composition-api': ^1.4.0
+      typescript: '>=4.4.4'
+      vue: ^2.6.14 || ^3.2.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+      typescript:
+        optional: true
+    dependencies:
+      '@vue/devtools-api': 6.4.5
+      typescript: 4.9.4
+      vue: 3.2.45
+      vue-demi: 0.13.11_vue@3.2.45
+    dev: false
 
   /pkg-types/0.3.6:
     resolution: {integrity: sha512-uQZutkkh6axl1GxDm5/+8ivVdwuJ5pyDGqJeSiIWIUWIqYiK3p9QKozN/Rv6eVvFoeSWkN1uoYeSDBwwBJBtbg==}
