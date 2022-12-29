@@ -40,8 +40,8 @@
   "vueCompilerOptions": {
     // vue 版本，默认 3
     "target": 3,
-    // 严格检查 Component tag 和 Props types
-    "strictTemplates": true,
+    // 严格检查 Component tag 和 Props types (有BUG，关闭)
+    // "strictTemplates": true,
     // "jsxTemplates": false,
     // "skipTemplateCodegen": false,
     "narrowingTypesInInlineHandlers": true,
