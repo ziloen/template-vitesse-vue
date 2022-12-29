@@ -16,6 +16,7 @@
     "@vueuse/rxjs": "^9.9.0",
     "@wai-ri/core": "^0.0.90",
     "@wai-ri/vue": "^0.0.90",
+    "axios": "^1.2.2",
     "motion": "^10.15.3",
     "naive-ui": "^2.34.3",
     "pinia": "^2.0.28",

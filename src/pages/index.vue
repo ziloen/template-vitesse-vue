@@ -1,14 +1,3 @@
-<script setup lang="ts">
-import SassVars from '~/styles/js.module.scss'
-const userName = ref('')
-
-const router = useRouter()
-function go() {
-  if (userName.value)
-    router.push(`/hi/${encodeURIComponent(userName.value)}`)
-}
-</script>
-
 <template>
   <div>
     <div class="i-carbon-campsite text-4xl inline-block" />
@@ -37,6 +26,16 @@ function go() {
     <Counter :initial="0" />
   </div>
 </template>
+
+<script setup lang="ts">
+const userName = ref('')
+
+const router = useRouter()
+function go() {
+  if (userName.value)
+    router.push(`/hi/${encodeURIComponent(userName.value)}`)
+}
+</script>
 
 <style scoped lang="scss">
 #input {

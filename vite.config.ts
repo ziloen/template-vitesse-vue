@@ -33,7 +33,7 @@ export default defineConfig({
         // 'vue/macros',
         'vue-router',
         '@vueuse/core',
-        { 'ulid': ['ulid'] }
+        { ulid: ['ulid'] }
       ],
       dts: './src/types/auto-imports.d.ts',
       dirs: [
