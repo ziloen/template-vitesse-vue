@@ -57,3 +57,14 @@
     width: stretch;
   }
 }
+
+.h {
+  &-grow {
+    height: min-content;
+    flex-grow: 1;
+  }
+
+  &-stretch {
+    height: stretch;
+  }
+}

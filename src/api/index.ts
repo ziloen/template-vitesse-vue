@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { useMessage } from 'naive-ui'
+import { message } from '~/utils'
 
 
 
@@ -11,15 +11,14 @@ const request = axios.create({
 
 
 request.interceptors.response.use(value => {
-  // const message = useMessage()
-  // message.success('....')
+  message.success('Request Success')
   // eslint-disable-next-line @typescript-eslint/no-unsafe-return
   return value.data
 }, (error: Error) => {
 
   // const message = useMessage()
   // eslint-disable-next-line @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-member-access
-  // message.error(error.message || 'Request Error')
+  message.error(error.message || 'Request Error')
   throw error
 })
 
