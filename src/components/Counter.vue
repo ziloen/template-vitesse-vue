@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { useCounter } from '@vueuse/core'
 import { useCounterStore } from '~/stores/counter'
 
 const props = defineProps<{

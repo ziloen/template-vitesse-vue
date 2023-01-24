@@ -29,10 +29,51 @@ export default defineConfig({
     // https://github.com/antfu/unplugin-auto-import
     AutoImport({
       imports: [
-        'vue',
+        {
+          vue: [
+            'computed',
+            'customRef',
+            'defineAsyncComponent',
+            'defineComponent',
+            'effectScope',
+            'inject',
+            'nextTick',
+            'onBeforeMount',
+            'onBeforeUnmount',
+            'onBeforeUpdate',
+            'onMounted',
+            'onUnmounted',
+            'onUpdated',
+            'onScopeDispose',
+            'provide',
+            'reactive',
+            'readonly',
+            'ref',
+            'shallowReactive',
+            'shallowReadonly',
+            'shallowRef',
+            'toRaw',
+            'unref',
+            'useCssModule',
+            'useCssVars',
+            'watch',
+            'watchEffect',
+            'watchPostEffect',
+            'watchSyncEffect'
+          ]
+        },
         // 'vue/macros',
-        'vue-router',
-        '@vueuse/core',
+        {
+          'vue-router': [
+            'useRoute',
+            'useRouter'
+          ]
+        },
+        {
+          '@vueuse/core': [
+            'unrefElement'
+          ]
+        },
         { ulid: ['ulid'] }
       ],
       dts: './src/types/auto-imports.d.ts',
