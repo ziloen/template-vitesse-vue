@@ -42,3 +42,13 @@ function go() {
   @apply px-4 py-2 text-center w-250px bg-transparent border border-rounded border-gray-200 dark: border-gray-700 outline-none active:outline-none;
 }
 </style>
+
+
+<!-- json / json5 / yaml -->
+<route lang="json">
+{
+  "meta": {
+    "requiresAuth": false
+  }
+}
+</route>
