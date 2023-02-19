@@ -3,7 +3,7 @@
     "baseUrl": ".",
     "module": "ESNext",
     "target": "ESNext",
-    // "jsx": "preserve", // volar don't need this after 1.0.0
+    "jsx": "preserve", // volar don't need this after 1.0.0
     // type checking
     "strict": true,
     "noImplicitAny": true,

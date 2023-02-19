@@ -1,6 +1,7 @@
 /// <reference types="vitest" />
 
 import Vue from '@vitejs/plugin-vue'
+import vueJsx from '@vitejs/plugin-vue-jsx'
 import path from 'node:path'
 import PostcssPresetEnv from 'postcss-preset-env'
 import Unocss from 'unocss/vite'
@@ -18,13 +19,14 @@ export default defineConfig({
   plugins: [
     VueRoute({
       routesFolder: 'src/pages',
-      extensions: ['.vue'],
+      extensions: ['.vue', '.tsx'],
       dts: './src/types/typed-router.d.ts'
     }),
 
-    Vue({
-      // reactivityTransform: true
-    }),
+    Vue(),
+
+    // https://github.com/vitejs/vite-plugin-vue/blob/main/packages/plugin-vue-jsx
+    vueJsx(),
 
     // https://github.com/antfu/unplugin-auto-import
     AutoImport({
