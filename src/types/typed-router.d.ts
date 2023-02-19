@@ -39,6 +39,7 @@ declare module 'vue-router/auto/routes' {
     '/[...all]': RouteRecordInfo<'/[...all]', '/:all(.*)', { all: ParamValue<true> }, { all: ParamValue<false> }>,
     '/hi/[name]': RouteRecordInfo<'/hi/[name]', '/hi/:name', { name: ParamValue<true> }, { name: ParamValue<false> }>,
     '/jsx/': RouteRecordInfo<'/jsx/', '/jsx', Record<never, never>, Record<never, never>>,
+    '/jsx/setup': RouteRecordInfo<'/jsx/setup', '/jsx/setup', Record<never, never>, Record<never, never>>,
     '/posts/': RouteRecordInfo<'/posts/', '/posts', Record<never, never>, Record<never, never>>,
     '/posts/[id]': RouteRecordInfo<'/posts/[id]', '/posts/:id', { id: ParamValue<true> }, { id: ParamValue<false> }>,
   }

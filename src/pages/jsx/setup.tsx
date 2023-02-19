@@ -3,20 +3,19 @@ type Props = {
   size?: number
 }
 
-export default defineComponent<Props>({
-  name: 'JsxExam',
-  setup({ size }, { emit, slots, expose }) {
-    const counter = ref(0)
-    const show = ref(false)
-    const el = ref<HTMLDivElement | null>(null)
+export default defineComponent<Props>(function ({ size }, context) {
+  const counter = ref(0)
+  const show = ref(false)
+  const el = ref<HTMLDivElement | null>(null)
 
-    onMounted(() => {
-      console.log('TSX Mounted')
-      console.log('element ref', el.value)
-    })
+  onMounted(() => {
+    console.log('TSX Mounted')
+    console.log('element ref', el.value)
+  })
 
-    return () => {
-      return <div ref={el} class="flex col gap-2">
+  return function FnComp() {
+    return (
+      <div ref={el} class="flex col gap-2">
         <div>{counter.value}</div>
         <div>
           <button class="btn" onClick={() => counter.value++}>+1</button>
@@ -29,6 +28,6 @@ export default defineComponent<Props>({
 
         <p>`v-if` & `v-on/@` & `v-for` is not supported</p>
       </div>
-    }
+    )
   }
 })
