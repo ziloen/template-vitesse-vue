@@ -13,7 +13,7 @@ export default defineComponent<Props>(function ({ size }, context) {
     console.log('element ref', el.value)
   })
 
-  return function FnComp() {
+  return function SetupComp() {
     return (
       <div ref={el} class="flex col gap-2">
         <div>{counter.value}</div>

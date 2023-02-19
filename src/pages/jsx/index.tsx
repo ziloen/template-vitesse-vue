@@ -1,7 +1,10 @@
 /* eslint-disable no-console */
+
 type Props = {
   size?: number
 }
+
+// TODO: v-modal, defineExpose, emit
 
 export default defineComponent<Props>({
   name: 'JsxExam',
@@ -16,7 +19,7 @@ export default defineComponent<Props>({
     })
 
     return () => {
-      return <div ref={el} class="flex col gap-2">
+      return <div ref={el} class="flex-align col gap-2">
         <div>{counter.value}</div>
         <div>
           <button class="btn" onClick={() => counter.value++}>+1</button>

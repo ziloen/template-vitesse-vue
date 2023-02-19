@@ -26,7 +26,10 @@ export default defineConfig({
     Vue(),
 
     // https://github.com/vitejs/vite-plugin-vue/blob/main/packages/plugin-vue-jsx
-    vueJsx(),
+    vueJsx({
+      optimize: true,
+      transformOn: true
+    }),
 
     // https://github.com/antfu/unplugin-auto-import
     AutoImport({
@@ -73,7 +76,8 @@ export default defineConfig({
         },
         {
           '@vueuse/core': [
-            'unrefElement'
+            'unrefElement',
+            'useVModel'
           ]
         },
         { ulid: ['ulid'] }
