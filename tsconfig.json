@@ -14,6 +14,7 @@
     "noImplicitThis": true,
     "alwaysStrict": true,
     //
+    "allowJs": false,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "incremental": true,
@@ -38,16 +39,16 @@
     }
   },
   "vueCompilerOptions": {
-    // vue 版本，默认 3
+    // vue version，default 3
     "target": 3,
-    // 严格检查 Component tag 和 Props types (有BUG，关闭)
+    // strict type check for Component tag and Props types (BUG，not working with svg, off)
     // "strictTemplates": true,
     // "jsxTemplates": false,
     // "skipTemplateCodegen": false,
     "narrowingTypesInInlineHandlers": true,
-    // 即使不是 scoped 的 style block 中的 class 也跳转
+    // link class for style block without scoped
     // "experimentalResolveStyleCssClasses": "always",
-    // 泛型组件 - ⚠ 实验中！
+    // generic component - ⚠ experimental！
     "experimentalRfc436": true
   },
   "exclude": [

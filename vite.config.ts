@@ -20,7 +20,11 @@ export default defineConfig({
     VueRoute({
       routesFolder: 'src/pages',
       extensions: ['.vue', '.tsx'],
-      dts: './src/types/typed-router.d.ts'
+      /** files to exclude from router scan */
+      exclude: ['**/components/**', '*.component.tsx', '*.component.vue'],
+      dts: './src/types/typed-router.d.ts',
+      /** (filepath: string) => 'sync' | 'async' */
+      importMode: 'async'
     }),
 
     Vue(),
