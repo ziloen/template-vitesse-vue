@@ -3,12 +3,11 @@
   "packageManager": "pnpm@7.24.3",
   "scripts": {
     "dev": "vite --port 3333",
-    "preview": "vite preview",
     "build": "vite build",
-    "lint": "eslint .",
-    "typecheck": "vue-tsc --noEmit",
+    "preview": "vite preview",
     "test": "vitest",
-    "up": "taze major -I"
+    "lint": "eslint .",
+    "typecheck": "vue-tsc --noEmit"
   },
   "dependencies": {
     "@vueuse/core": "^9.13.0",
