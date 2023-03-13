@@ -79,5 +79,10 @@ export default defineConfig({
     /* support @apply */
     transformerDirectives()
     // transformerVariantGroup(),
-  ]
+  ],
+  theme: {
+    colors: {
+
+    }
+  }
 })

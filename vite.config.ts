@@ -117,6 +117,10 @@ export default defineConfig({
     }
   },
 
+  optimizeDeps: {
+    include: ['motion/vue', '@vueuse/core']
+  },
+
   // https://github.com/vitest-dev/vitest
   test: {
     environment: 'jsdom'
