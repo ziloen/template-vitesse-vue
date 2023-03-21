@@ -19,7 +19,7 @@
     "esModuleInterop": true,
     "incremental": true,
     "skipLibCheck": true,
-    "moduleResolution": "bundler",
+    "moduleResolution": "node",
     "resolveJsonModule": true,
     "noUnusedLocals": false,
     "forceConsistentCasingInFileNames": true,
