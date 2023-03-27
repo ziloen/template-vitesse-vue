@@ -4,7 +4,8 @@
     "module": "ESNext",
     "target": "ESNext",
     "jsx": "preserve", // volar don't need this after 1.0.0
-    // type checking
+    // "jsxImportSource": "vue", // vue 3.3.0+
+    /* Type Checking */
     "strict": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
@@ -12,7 +13,18 @@
     "strictBindCallApply": true,
     "strictPropertyInitialization": true,
     "noImplicitThis": true,
+    "useUnknownInCatchVariables": true,
     "alwaysStrict": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitReturns": true,
+    // "noFallthroughCasesInSwitch": false,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    // "noPropertyAccessFromIndexSignature": false,
+    // "allowUnusedLabels": true,
+    // "allowUnreachableCode": true,
     //
     "allowJs": false,
     "allowSyntheticDefaultImports": true,
@@ -21,7 +33,6 @@
     "skipLibCheck": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "noUnusedLocals": false,
     "forceConsistentCasingInFileNames": true,
     "lib": [
       "DOM",
@@ -39,17 +50,14 @@
     }
   },
   "vueCompilerOptions": {
-    // vue version，default 3
-    "target": 3,
+    // vue version (default: 3.2.0)
+    "target": 3.3,
     // strict type check for Component tag and Props types (BUG，not working with svg, off)
     // "strictTemplates": true,
     // "jsxTemplates": false,
     // "skipTemplateCodegen": false,
-    "narrowingTypesInInlineHandlers": true,
     // link class for style block without scoped
-    // "experimentalResolveStyleCssClasses": "always",
-    // generic component - ⚠ experimental！
-    "experimentalRfc436": true
+    "experimentalResolveStyleCssClasses": "always",
   },
   "exclude": [
     "dist",

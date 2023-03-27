@@ -13,5 +13,6 @@
   ],
   "emmet.extensionsPath": [
     "./.vscode/emmet"
-  ]
+  ],
+  "typescript.tsdk": "node_modules\\typescript\\lib"
 }
