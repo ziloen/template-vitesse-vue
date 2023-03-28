@@ -6,7 +6,7 @@ specifiers:
   '@unocss/reset': ^0.50.6
   '@vitejs/plugin-vue': 4.1.0
   '@vitejs/plugin-vue-jsx': ^3.0.1
-  '@volar-plugins/prettyhtml': 2.0.0-alpha.18
+  '@volar-plugins/prettyhtml': 2.0.0-alpha.19
   '@vue/test-utils': ^2.3.2
   '@vueuse/core': ^9.13.0
   '@vueuse/motion': 2.0.0-beta.12
@@ -59,7 +59,7 @@ devDependencies:
   '@unocss/reset': 0.50.6
   '@vitejs/plugin-vue': 4.1.0_vite@4.2.1+vue@3.2.47
   '@vitejs/plugin-vue-jsx': 3.0.1_vite@4.2.1+vue@3.2.47
-  '@volar-plugins/prettyhtml': 2.0.0-alpha.18
+  '@volar-plugins/prettyhtml': 2.0.0-alpha.19
   '@vue/test-utils': 2.3.2_vue@3.2.47
   '@ziloen/eslint-config': 0.0.85
   '@ziloen/eslint-config-format': 0.0.85
@@ -1782,8 +1782,8 @@ packages:
       pretty-format: 27.5.1
     dev: true
 
-  /@volar-plugins/prettyhtml/2.0.0-alpha.18:
-    resolution: {integrity: sha512-DGhG93WJ4Duozw83o/Pgz5uAFoDhkbIKXSccuU7U7xWuKNuu2TcqgxnTql8C3rGlAdTCNbh0fvK7ax6tvb8R/g==}
+  /@volar-plugins/prettyhtml/2.0.0-alpha.19:
+    resolution: {integrity: sha512-XrGNCNkGAzt085REQw9FQmDWNicV/xjSAJ0qyxctnGN9KqOnceJ45Gk71JPHOcGZM8/mYhS0F6lRouWdAKjoCQ==}
     peerDependencies:
       '@volar/language-service': '*'
     peerDependenciesMeta:
@@ -5842,7 +5842,7 @@ packages:
     dev: true
 
   /replace-ext/1.0.0:
-    resolution: {integrity: sha1-3mMSg3P8v3w8z6TeWkgMRaZ5WOs=}
+    resolution: {integrity: sha512-vuNYXC7gG7IeVNBC1xUllqCcZKRbJoSPOBhnTEcAIiKCsbuef6zO3F0Rve3isPMMoNoQRWjQwbAgAjHUHniyEA==}
     engines: {node: '>= 0.10'}
     dev: true
 
