@@ -114,6 +114,9 @@ export default defineConfig({
       // polyfills: [],
       // polyfills for modern browsers (supports esm)
       modernPolyfills: [
+        // Not implemented yet
+        'web.structured-clone',
+
         // ES2022
         'es.array.at',
         'es.string.at-alternative',
