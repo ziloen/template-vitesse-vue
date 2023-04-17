@@ -114,11 +114,23 @@ export default defineConfig({
       // polyfills: [],
       // polyfills for modern browsers (supports esm)
       modernPolyfills: [
+        // ES2022
         'es.array.at',
-        'es.error.cause',
-        'es.object.has-own',
         'es.string.at-alternative',
-        'es.typed-array.at'
+        'es.typed-array.at',
+
+        'es.object.has-own',
+
+        'es.aggregate-error',
+        'es.aggregate-error.cause',
+        'es.error.cause',
+
+        // ES2021
+        'es.string.replace-all',
+        'es.promise.any',
+
+        // ES2020
+        'es.string.match-all'
       ]
     })
   ],
