@@ -1,5 +1,6 @@
 /// <reference types="vitest" />
 
+import legacy from '@vitejs/plugin-legacy'
 import Vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import path from 'node:path'
@@ -103,7 +104,23 @@ export default defineConfig({
 
     // https://github.com/antfu/unocss
     // see unocss.config.ts for config
-    Unocss()
+    Unocss(),
+
+    // https://github.com/vitejs/vite/tree/main/packages/plugin-legacy
+    legacy({
+      // render legacy chunks for non-modern browsers
+      renderLegacyChunks: false,
+      // polyfills for non-modern browsers (not supports esm)
+      // polyfills: [],
+      // polyfills for modern browsers (supports esm)
+      modernPolyfills: [
+        'es.array.at',
+        'es.error.cause',
+        'es.object.has-own',
+        'es.string.at-alternative',
+        'es.typed-array.at'
+      ]
+    })
   ],
 
   css: {
