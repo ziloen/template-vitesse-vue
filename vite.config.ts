@@ -117,6 +117,16 @@ export default defineConfig({
         // Not implemented yet
         'web.structured-clone',
 
+        // ES2023
+        'es.array.find-last',
+        'es.array.find-last-index',
+        'es.typed-array.find-last',
+        'es.typed-array.find-last-index',
+
+        'esnext.array.to-reversed',
+        'esnext.array.to-sorted',
+        'esnext.array.to-spliced',
+
         // ES2022
         'es.array.at',
         'es.string.at-alternative',
