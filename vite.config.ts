@@ -126,6 +126,7 @@ export default defineConfig({
         'esnext.array.to-reversed',
         'esnext.array.to-sorted',
         'esnext.array.to-spliced',
+        'esnext.array.with',
 
         // ES2022
         'es.array.at',
