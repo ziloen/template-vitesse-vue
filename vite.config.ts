@@ -28,7 +28,12 @@ export default defineConfig({
       importMode: 'async'
     }),
 
-    Vue(),
+    Vue({
+      script: {
+        defineModel: true,
+        propsDestructure: true
+      }
+    }),
 
     // https://github.com/vitejs/vite-plugin-vue/blob/main/packages/plugin-vue-jsx
     vueJsx({

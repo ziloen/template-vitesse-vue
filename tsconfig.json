@@ -50,7 +50,7 @@
     }
   },
   "vueCompilerOptions": {
-    // vue version (default: 3.2.0)
+    // vue version (default: "auto")
     "target": 3.3,
     // strict type check for Component tag and Props types (BUG，not working with svg, off)
     // "strictTemplates": true,
