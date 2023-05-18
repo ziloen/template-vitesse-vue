@@ -17,6 +17,14 @@ export default defineConfig({
       '~/': `${path.resolve(__dirname, 'src')}/`
     }
   },
+
+  define: {
+    /** Options API support */
+    __VUE_OPTIONS_API__: false,
+    /** production devtools support */
+    __VUE_PROD_DEVTOOLS__: false,
+  },
+
   plugins: [
     VueRoute({
       routesFolder: 'src/pages',
