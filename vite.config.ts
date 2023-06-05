@@ -83,22 +83,22 @@ export default defineConfig({
             'watchEffect',
             'watchPostEffect',
             'watchSyncEffect'
-          ]
-        },
-        // 'vue/macros',
-        {
+          ],
+
           'vue-router': [
             'useRoute',
             'useRouter'
-          ]
-        },
-        {
+          ],
+
+          // 'vue/macros',
+
           '@vueuse/core': [
             'unrefElement',
             'useVModel'
-          ]
-        },
-        { ulid: ['ulid'] }
+          ],
+
+          ulid: ['ulid']
+        }
       ],
       dts: './src/types/auto-imports.d.ts',
       dirs: [
