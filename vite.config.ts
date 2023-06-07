@@ -182,6 +182,7 @@ export default defineConfig({
     postcss: {
       plugins: [PostcssPresetEnv({ stage: 0 })]
     },
+
     preprocessorOptions: {
       scss: {
         additionalData: `@use "~/styles/variables/index.module.scss" as *;`

@@ -5,7 +5,9 @@
     "target": "ESNext",
     "jsx": "preserve", // volar don't need this after 1.0.0
     // "jsxImportSource": "vue", // vue 3.3.0+
-    /* Type Checking */
+    /**
+     * ===== Type Checking =====
+     */
     "strict": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
@@ -25,7 +27,9 @@
     // "noPropertyAccessFromIndexSignature": false,
     // "allowUnusedLabels": true,
     // "allowUnreachableCode": true,
-    //
+    /**
+     * ===== Emit =====
+     */
     "allowJs": false,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
