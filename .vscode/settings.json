@@ -16,5 +16,18 @@
   ],
   "typescript.tsdk": "node_modules\\typescript\\lib",
   // due to this issue https://github.com/microsoft/vscode/issues/179355, we need to set this to top
-  "editor.snippetSuggestions": "top"
+  "editor.snippetSuggestions": "top",
+  // if you use mrmlnc.vscode-scss extension
+  "scss.scannerExclude": [
+    "**/.git",
+    "**/node_modules",
+    "**/bower_components",
+    "**/dist",
+    // exclude all files in src folder except `src/styles/variables/index.module.scss`
+    "src/!(styles)",
+    "src/!(styles)/**/*",
+    "src/styles/!(variables)",
+    "src/styles/!(variables)/**/*",
+    "src/styles/variables/!(index.module).scss",
+  ],
 }
