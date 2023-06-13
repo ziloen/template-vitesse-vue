@@ -7,10 +7,11 @@
     // "source.organizeImports",
     "source.fixAll.eslint",
   ],
-  // add @apply to css atDirectives
+  // add @apply & @container to css atDirectives
   "css.customData": [
     "./.vscode/css-data.json"
   ],
+  // add @container & @media snippet
   "emmet.extensionsPath": [
     "./.vscode/emmet"
   ],
