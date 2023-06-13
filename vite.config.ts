@@ -23,6 +23,10 @@ export default defineConfig({
     __VUE_OPTIONS_API__: false,
     /** production devtools support */
     __VUE_PROD_DEVTOOLS__: false,
+    /** is production mode */
+    IS_PROD: process.env.NODE_ENV === 'production',
+    /** is development mode */
+    IS_DEV: process.env.NODE_ENV === 'development'
   },
 
   plugins: [
