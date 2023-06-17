@@ -30,6 +30,7 @@ export default defineConfig({
   },
 
   plugins: [
+    // https://github.com/posva/unplugin-vue-router
     VueRoute({
       routesFolder: 'src/pages',
       extensions: ['.vue', '.tsx'],
@@ -40,6 +41,7 @@ export default defineConfig({
       importMode: 'async'
     }),
 
+    // https://github.com/vitejs/vite-plugin-vue/tree/main/packages/plugin-vue
     Vue({
       script: {
         defineModel: true,
@@ -120,8 +122,10 @@ export default defineConfig({
     }),
 
     // https://github.com/antfu/unocss
-    // see unocss.config.ts for config
-    Unocss(),
+    // https://unocss.dev/integrations/vite
+    Unocss({
+      mode: 'global'
+    }),
 
     // https://github.com/vitejs/vite/tree/main/packages/plugin-legacy
     legacy({

@@ -47,7 +47,10 @@ export default defineConfig({
     /** Flex Layout */
     [flexReg, match => {
       return flexStyle[match[1]]
-    }]
+    }],
+
+    ['anchor-auto', { overflowAnchor: 'auto' } satisfies CSSProperties],
+    ['anchor-none', { overflowAnchor: 'none' } satisfies CSSProperties],
   ],
   shortcuts: [
     // delete this two line
