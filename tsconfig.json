@@ -43,6 +43,7 @@
     "noEmit": true,
     "resolveJsonModule": true,
     "forceConsistentCasingInFileNames": true,
+    "downlevelIteration": false,
     "lib": [
       "DOM",
       "ESNext",
