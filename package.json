@@ -8,12 +8,13 @@
     "typecheck": "vue-tsc --noEmit"
   },
   "dependencies": {
-    "@vueuse/core": "^10.1.2",
+    "@vueuse/core": "^10.2.0",
     "@vueuse/motion": "2.0.0",
-    "@vueuse/rxjs": "^10.1.2",
+    "@vueuse/rxjs": "^10.2.0",
     "@wai-ri/core": "^0.0.99",
     "@wai-ri/vue": "^0.0.99",
     "axios": "^1.4.0",
+    "magic-regexp": "^0.7.0",
     "motion": "^10.16.2",
     "naive-ui": "^2.34.4",
     "pinia": "^2.1.4",
@@ -32,7 +33,7 @@
     "@vue/test-utils": "^2.3.2",
     "@ziloen/eslint-config": "^0.0.94",
     "@ziloen/eslint-config-format": "^0.0.94",
-    "eslint": "^8.42.0",
+    "eslint": "^8.43.0",
     "jsdom": "^22.1.0",
     "postcss": "^8.4.24",
     "postcss-preset-env": "^8.5.0",
@@ -44,9 +45,9 @@
     "unplugin-vue-components": "^0.25.1",
     "unplugin-vue-router": "^0.6.4",
     "vite": "4.3.9",
-    "vitest": "^0.32.0",
+    "vitest": "^0.32.2",
     "volar-service-prettyhtml": "^0.0.7",
-    "vue-tsc": "^1.6.5"
+    "vue-tsc": "^1.8.0"
   },
   "eslintConfig": {
     "rules": {
