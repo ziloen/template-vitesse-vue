@@ -1,21 +1,24 @@
 // @ts-nocheck
-import {
-  AsyncFn as _AsyncFn,
-  EnumString as _EnumString,
-  Fn as _Fn
-} from "@wai-ri/core"
 
+
+
+// global variables
 declare global {
   const IS_PROD: boolean
   const IS_DEV: boolean
+  const IS_BUILD: boolean
+}
 
-  export {
-    _AsyncFn as AsyncFn,
-    _EnumString as EnumString,
-    _Fn as Fn,
-    IS_DEV,
-    IS_PROD
-  }
+
+
+import type { } from "@wai-ri/core"
+// global types
+declare global {
+  export type {
+    AsyncFn,
+    Fn,
+    LiteralUnion
+  } from "@wai-ri/core"
 }
 
 export { }
