@@ -49,8 +49,8 @@ export default defineConfig({
       return flexStyle[match[1]]
     }],
 
-    ['anchor-auto', { overflowAnchor: 'auto' } satisfies CSSProperties],
-    ['anchor-none', { overflowAnchor: 'none' } satisfies CSSProperties],
+    ['anchor-auto', { 'overflow-anchor': 'auto' }],
+    ['anchor-none', { 'overflow-anchor': 'none' }],
   ],
   shortcuts: [
     // delete this two line
