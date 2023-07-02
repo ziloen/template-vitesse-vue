@@ -4,38 +4,8 @@ import {
   presetIcons,
   presetUno,
   presetWebFonts,
-  transformerDirectives
-  // transformerVariantGroup,
+  transformerDirectives,
 } from 'unocss'
-import type { CSSProperties } from 'vue'
-
-const flexStyle: Record<string, CSSProperties> = {
-  center: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-  between: {
-    display: 'flex',
-    justifyContent: 'space-between'
-  },
-  align: {
-    display: 'flex',
-    alignItems: 'center'
-  },
-  justify: {
-    display: 'flex',
-    justifyContent: 'center'
-  },
-  stretch: {
-    display: 'flex',
-    alignItems: 'stretch'
-  }
-} /* satisfies Record<string, CSSProperties> */
-
-const flexReg = new RegExp(`^flex-(${Object.keys(flexStyle).join('|')})$`)
-
-// csstypes
 
 export default defineConfig({
   rules: [
@@ -44,13 +14,13 @@ export default defineConfig({
       const [, rowStart, colStart] = match
       return { 'grid-row-start': rowStart, 'grid-column-start': colStart }
     }],
-    /** Flex Layout */
-    [flexReg, match => {
-      return flexStyle[match[1]]
-    }],
-
     ['anchor-auto', { 'overflow-anchor': 'auto' }],
     ['anchor-none', { 'overflow-anchor': 'none' }],
+    ['flex-center', { display: 'flex', 'justify-content': 'center', 'align-items': 'center' }],
+    ['flex-between', { display: 'flex', 'justify-content': 'space-between' }],
+    ['flex-align', { display: 'flex', 'align-items': 'center' }],
+    ['flex-justify', { display: 'flex', 'justify-content': 'center' }],
+    ['flex-stretch', { display: 'flex', 'align-items': 'stretch' }],
   ],
   shortcuts: [
     // delete this two line
