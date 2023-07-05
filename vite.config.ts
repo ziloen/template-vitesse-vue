@@ -142,9 +142,11 @@ export default defineConfig(({ command, mode }) => {
         // polyfills: [],
         /** polyfills for modern browsers (supports esm) */
         modernPolyfills: [
-          // Not implemented yet
+          // Web APIs
           /** structuredClone() */
           'web.structured-clone',
+          /** URL.canParse() */
+          'web.url.can-parse',
 
           // ES2023
           /** Array.prototype.findLast() */
