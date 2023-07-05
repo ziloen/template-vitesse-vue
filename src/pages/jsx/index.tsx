@@ -6,9 +6,9 @@ type Props = {
 
 // TODO: v-modal, defineExpose, emit
 
-export default defineComponent<Props>({
-  name: 'JsxExam',
-  setup({ size }, { emit, slots, expose }) {
+const JsxExample1 = defineComponent<Props>({
+  name: 'JsxExample1',
+  setup(props, { emit, slots, expose }) {
     const counter = ref(0)
     const show = ref(false)
     const el = ref<HTMLDivElement | null>(null)
@@ -36,22 +36,25 @@ export default defineComponent<Props>({
   }
 })
 
-// TODO:
-// 1. Test if this works
-// 2. Vue 3.3 generic defineComponent
-export const JsxExam2 = defineComponent((props: Props) => {
+const JsxExample2 = defineComponent((props: Props) => {
   const counter = ref(0)
+  const inputVal = ref('test')
   const show = ref(false)
   const el = ref<HTMLDivElement | null>(null)
 
   onMounted(() => {
-    console.log('TSX Mounted')
+    console.log('TSX Example2 Mounted')
     console.log('element ref', el.value)
+  })
+
+  onUnmounted(() => {
+    console.log('TSX Example2 Unmounted')
   })
 
   return () => (
     <div ref={el} class="flex-align col gap-2">
       <div>{counter.value}</div>
+      <input class="text-black" type="text" v-model={inputVal.value} />
       <div>
         <button class="btn" onClick={() => counter.value++}>+1</button>
       </div>
@@ -65,3 +68,5 @@ export const JsxExam2 = defineComponent((props: Props) => {
     </div>
   )
 })
+
+export default JsxExample2

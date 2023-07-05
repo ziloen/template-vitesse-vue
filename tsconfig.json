@@ -4,7 +4,7 @@
     "module": "ESNext",
     "target": "ESNext",
     "jsx": "preserve", // volar don't need this after 1.0.0
-    // "jsxImportSource": "vue", // vue 3.3.0+
+    "jsxImportSource": "vue", // vue 3.3.0+
     /** 
      * ===== Modules =====
      */
