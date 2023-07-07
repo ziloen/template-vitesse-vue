@@ -36,7 +36,10 @@ const JsxExample1 = defineComponent<Props>({
   }
 })
 
-const JsxExample2 = defineComponent((props: Props) => {
+const JsxExample2 = defineComponent((
+  props: Props,
+  { emit, expose, slots, attrs }
+) => {
   const counter = ref(0)
   const inputVal = ref('test')
   const show = ref(false)
@@ -49,6 +52,10 @@ const JsxExample2 = defineComponent((props: Props) => {
 
   onUnmounted(() => {
     console.log('TSX Example2 Unmounted')
+  })
+
+  expose({
+    counter,
   })
 
   return () => (
