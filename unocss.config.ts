@@ -34,8 +34,10 @@ export default defineConfig({
     ['resizable', 'resize overflow-hidden']
   ],
   presets: [
-    presetUno(),
-    presetAttributify(),
+    presetUno({
+      arbitraryVariants: false,
+    }),
+    // presetAttributify(),
     presetIcons({
       scale: 1.2,
       warn: true
