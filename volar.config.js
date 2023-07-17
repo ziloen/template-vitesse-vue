@@ -1,5 +1,5 @@
 module.exports = {
-  plugins: [
+  services: [
     require('volar-service-prettyhtml').default({
       printWidth: 120,
       wrapAttributes: false
