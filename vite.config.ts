@@ -1,5 +1,6 @@
 /// <reference types="vitest" />
 
+import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite'
 import legacy from '@vitejs/plugin-legacy'
 import Vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
@@ -54,6 +55,10 @@ export default defineConfig(({ command, mode }) => {
           defineModel: true,
           propsDestructure: true
         }
+      }),
+
+      VueI18nPlugin({
+        include: path.resolve(__dirname, './src/locales/**'),
       }),
 
       // https://github.com/vitejs/vite-plugin-vue/blob/main/packages/plugin-vue-jsx

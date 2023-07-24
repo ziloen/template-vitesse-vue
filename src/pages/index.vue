@@ -24,10 +24,18 @@
     </div>
 
     <Counter :initial="0" />
+
+    <div>{{ t("hello", { name: "World" }) }}</div>
+
+    <div>{{ t("contactUsLink", { link: (text: string) => h("a", { class: "link-btn" }, text) }) }}</div>
   </div>
 </template>
 
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n'
+import { h } from 'vue'
+
+const { t } = useI18n()
 const userName = ref('')
 
 const router = useRouter()
