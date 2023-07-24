@@ -64,7 +64,8 @@
     },
     "ignorePatterns": [
       "volar.config.js",
-      "dist"
+      "dist",
+      "*.html"
     ]
   }
 }
