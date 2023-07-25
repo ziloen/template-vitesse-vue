@@ -20,8 +20,13 @@ const router = createRouter({
 const i18n = createI18n({
   legacy: false,
   locale: 'en',
+  // custom formatter is removed.
+  // formatter: {
+  //   interpolate(message, values) {
+  //     return [message]
+  //   }
+  // },
   fallbackLocale: 'en',
-  // messageResolver: (obj, path) => path.split('.').reduce((o, i) => o[i], obj),
   // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   messages,
 })
