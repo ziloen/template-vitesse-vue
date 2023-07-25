@@ -1,5 +1,8 @@
 {
-  "prettier.enable": false,
+  // add @apply & @container to css atDirectives
+  "css.customData": [
+    "./.vscode/css-data.json"
+  ],
   "editor.codeActionsOnSave": [
     // only sort imports
     "source.sortImports",
@@ -7,17 +10,17 @@
     // "source.organizeImports",
     "source.fixAll.eslint",
   ],
-  // add @apply & @container to css atDirectives
-  "css.customData": [
-    "./.vscode/css-data.json"
-  ],
+  // due to this issue https://github.com/microsoft/vscode/issues/179355, we need to set this to top
+  "editor.snippetSuggestions": "top",
   // add @container & @media snippet
   "emmet.extensionsPath": [
     "./.vscode/emmet"
   ],
-  "typescript.tsdk": "node_modules\\typescript\\lib",
-  // due to this issue https://github.com/microsoft/vscode/issues/179355, we need to set this to top
-  "editor.snippetSuggestions": "top",
+  "i18n-ally.keystyle": "nested",
+  "i18n-ally.localesPaths": "locales",
+  "i18n-ally.sortKeys": true,
+  "i18n-ally.sourceLanguage": "en",
+  "prettier.enable": false,
   // if you use mrmlnc.vscode-scss extension
   "scss.scannerExclude": [
     "**/.git",
@@ -32,5 +35,6 @@
     "/src/styles/!(variables)",
     "/src/styles/!(variables)/**/*",
     "/src/styles/variables/!(index.module.scss)"
-  ]
+  ],
+  "typescript.tsdk": "node_modules\\typescript\\lib"
 }
