@@ -3,12 +3,13 @@
     "baseUrl": ".",
     "module": "ESNext",
     "target": "ESNext",
-    "jsx": "preserve", // volar don't need this after 1.0.0
-    "jsxImportSource": "vue", // vue 3.3.0+
+    "jsx": "preserve",
+    "jsxImportSource": "vue",
     /** 
      * ===== Modules =====
      */
     "allowImportingTsExtensions": true,
+    "allowArbitraryExtensions": true,
     /**
      * ===== Type Checking =====
      */
@@ -37,8 +38,8 @@
     "allowJs": false,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
-    "incremental": true,
-    "skipLibCheck": false,
+    // "incremental": true,
+    "skipLibCheck": true,
     "moduleResolution": "node",
     "noEmit": true,
     "resolveJsonModule": true,
@@ -61,7 +62,7 @@
   },
   "vueCompilerOptions": {
     // vue version (default: "auto")
-    "target": 3.3,
+    // "target": 3.3,
     // strict type check for Component tag and Props types (BUG，not working with svg, off)
     // "strictTemplates": true,
     // "jsxTemplates": false,

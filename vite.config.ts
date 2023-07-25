@@ -207,6 +207,7 @@ export default defineConfig(({ command, mode }) => {
     ],
 
     css: {
+      // TODO: investigate lightningcss when stable https://github.com/vitejs/vite/discussions/13835
       postcss: {
         plugins: [PostcssPresetEnv({ stage: 0 })]
       },
@@ -218,6 +219,7 @@ export default defineConfig(({ command, mode }) => {
       }
     },
 
+    // https://vitejs.dev/config/dep-optimization-options.html
     optimizeDeps: {
       include: ['motion/vue', '@vueuse/core']
     },
