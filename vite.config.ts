@@ -57,8 +57,14 @@ export default defineConfig(({ command, mode }) => {
         }
       }),
 
+      // https://github.com/intlify/bundle-tools/tree/main/packages/unplugin-vue-i18n
       VueI18nPlugin({
-        include: path.resolve(__dirname, './src/locales/**'),
+        runtimeOnly: true,
+        compositionOnly: true,
+        fullInstall: false,
+        escapeHtml: false,
+        strictMessage: false,
+        include: path.resolve(__dirname, 'locales/**'),
       }),
 
       // https://github.com/vitejs/vite-plugin-vue/blob/main/packages/plugin-vue-jsx

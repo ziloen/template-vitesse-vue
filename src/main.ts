@@ -3,6 +3,7 @@ import 'uno.css'
 import './styles/atom.scss'
 import './styles/main.css'
 
+import messages from '@intlify/unplugin-vue-i18n/messages'
 import { createPinia } from 'pinia'
 import { createApp } from 'vue'
 import { createI18n } from 'vue-i18n'
@@ -21,12 +22,8 @@ const i18n = createI18n({
   locale: 'en',
   fallbackLocale: 'en',
   // messageResolver: (obj, path) => path.split('.').reduce((o, i) => o[i], obj),
-  messages: {
-    en: {
-      hello: 'Hello {name}!',
-      contactUsLink: 'Click <link>here</link> to contact us',
-    }
-  }
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+  messages,
 })
 
 createApp(App)

@@ -51,7 +51,7 @@
     ],
     "types": [
       "vite/client",
-      "typescript-lib-enhancer"
+      "typescript-lib-enhancer",
     ],
     "paths": {
       "~/*": [
