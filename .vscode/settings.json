@@ -1,7 +1,7 @@
 {
   // add @apply & @container to css atDirectives
   "css.customData": [
-    "./.vscode/css-data.json"
+    ".vscode/css-data.json"
   ],
   "editor.codeActionsOnSave": [
     // only sort imports
@@ -14,7 +14,7 @@
   "editor.snippetSuggestions": "top",
   // add @container & @media snippet
   "emmet.extensionsPath": [
-    "./.vscode/emmet"
+    ".vscode/emmet"
   ],
   "i18n-ally.keystyle": "nested",
   "i18n-ally.localesPaths": "locales",
@@ -27,6 +27,7 @@
     "**/node_modules",
     "**/bower_components",
     "**/dist",
+    // FIXME: this is ugly, but it works
     // exclude all files in src folder except `src/styles/variables/index.module.scss`
     "/!(src)",
     "/!(src)/**/*",
