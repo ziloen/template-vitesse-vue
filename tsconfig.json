@@ -9,7 +9,7 @@
      * ===== Modules =====
      */
     "allowImportingTsExtensions": true,
-    "allowArbitraryExtensions": true,
+    "allowArbitraryExtensions": true, // Not working in vue files
     /**
      * ===== Type Checking =====
      */
