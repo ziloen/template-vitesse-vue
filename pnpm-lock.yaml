@@ -58,9 +58,6 @@ devDependencies:
   '@intlify/unplugin-vue-i18n':
     specifier: ^0.12.2
     version: 0.12.2(vue-i18n@9.2.2)
-  '@types/node':
-    specifier: 20.4.5
-    version: 20.4.5
   '@unocss/reset':
     specifier: ^0.54.1
     version: 0.54.1
