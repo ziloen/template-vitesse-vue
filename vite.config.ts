@@ -21,7 +21,7 @@ export default defineConfig(({ command, mode }) => {
     resolve: {
       alias: {
         '~': path.resolve('src'),
-        '~~': process.cwd(),
+        '~cwd': process.cwd(),
       }
     },
 
