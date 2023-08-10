@@ -1,5 +1,4 @@
-import { request, type PageParams } from '~/api'
-
+import { type PageParams, request } from '~/api'
 
 export type Post = {
   userID: number
