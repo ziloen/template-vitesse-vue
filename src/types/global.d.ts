@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
 
 
@@ -11,14 +12,14 @@ declare global {
 
 
 
-import type { } from "@wai-ri/core"
+import type { } from '@wai-ri/core'
 // global types
 declare global {
   export type {
     AsyncFn,
     Fn,
     LiteralUnion
-  } from "@wai-ri/core"
+  } from '@wai-ri/core'
 }
 
 export { }

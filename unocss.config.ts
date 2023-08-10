@@ -3,7 +3,8 @@ import {
   presetIcons,
   presetUno,
   presetWebFonts,
-  transformerDirectives
+  transformerDirectives,
+  transformerVariantGroup,
 } from 'unocss'
 
 export default defineConfig({
@@ -60,8 +61,9 @@ export default defineConfig({
   ],
   transformers: [
     /* support @apply */
-    transformerDirectives()
-    // transformerVariantGroup(),
+    transformerDirectives(),
+    /* support `dark:(text-white bg-black)` and `text-(xl white)` */
+    transformerVariantGroup(),
   ],
   theme: {
     colors: {
