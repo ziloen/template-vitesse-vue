@@ -53,6 +53,8 @@
     "types": [
       "vite/client",
       "typescript-lib-enhancer",
+      "typescript-lib-enhancer/highlight",
+      "typescript-lib-enhancer/view-transition",
     ],
     "paths": {
       "~/*": [
