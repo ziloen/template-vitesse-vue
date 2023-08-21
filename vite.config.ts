@@ -195,14 +195,14 @@ export default defineConfig(({ command, mode }) => {
           'es.error.cause',
 
           // ES2021
-          /** String.prototype.replaceAll() */
-          'es.string.replace-all',
-          /** Promise.any() */
-          'es.promise.any',
+          // /** String.prototype.replaceAll() */
+          // 'es.string.replace-all',
+          // /** Promise.any() */
+          // 'es.promise.any',
 
           // ES2020
-          /** String.prototype.matchAll() */
-          'es.string.match-all'
+          // /** String.prototype.matchAll() */
+          // 'es.string.match-all'
         ]
       })
     ],

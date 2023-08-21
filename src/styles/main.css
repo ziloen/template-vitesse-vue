@@ -8,10 +8,11 @@ body,
 
 html.dark {
   background: #121212;
+  color: white;
 }
 
 body {
-  @apply font-sans dark:text-white;
+  @apply font-sans;
 }
 
 /* @font-face {
