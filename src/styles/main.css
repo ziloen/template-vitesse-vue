@@ -10,6 +10,10 @@ html.dark {
   background: #121212;
 }
 
+body {
+  @apply font-sans dark:text-white;
+}
+
 /* @font-face {
   font-family: "Fira Code";
   src: local("Fira Code");
