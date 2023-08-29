@@ -28,7 +28,7 @@ const i18n = createI18n({
   // },
   fallbackLocale: 'en',
   // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-  messages,
+  messages: messages!,
 })
 
 createApp(App)

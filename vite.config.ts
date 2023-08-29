@@ -126,9 +126,7 @@ export default defineConfig(({ command, mode }) => {
           }
         ],
         dts: './src/types/auto-imports.d.ts',
-        dirs: [
-          './src/composables'
-        ],
+        // dirs: ['./src/composables'],
         vueTemplate: true
       }),
 
@@ -192,17 +190,7 @@ export default defineConfig(({ command, mode }) => {
           /** AggregateError: cause */
           'es.aggregate-error.cause',
           /** Error: cause */
-          'es.error.cause',
-
-          // ES2021
-          // /** String.prototype.replaceAll() */
-          // 'es.string.replace-all',
-          // /** Promise.any() */
-          // 'es.promise.any',
-
-          // ES2020
-          // /** String.prototype.matchAll() */
-          // 'es.string.match-all'
+          'es.error.cause'
         ]
       })
     ],

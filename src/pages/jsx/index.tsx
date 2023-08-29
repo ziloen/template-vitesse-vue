@@ -1,5 +1,7 @@
 /* eslint-disable no-console */
 
+import { useT } from '~/composables/useT'
+
 type Props = {
   size?: number
 }
@@ -44,6 +46,7 @@ const JsxExample2 = defineComponent((
   const inputVal = ref('test')
   const show = ref(false)
   const el = ref<HTMLDivElement | null>(null)
+  const { t } = useT()
 
   onMounted(() => {
     console.log('TSX Example2 Mounted')
@@ -72,6 +75,9 @@ const JsxExample2 = defineComponent((
       {show.value ? <div>JSX condition render</div> : null}
 
       <p>`v-if` & `v-on/@` & `v-for` is not supported</p>
+
+      <p>{t('contactUsLink', { link: text => <span class="text-blue-4">{text}</span> })}</p>
+      <p>{t('hello')}</p>
     </div>
   )
 })
