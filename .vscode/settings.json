@@ -1,4 +1,7 @@
 {
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
   // add @apply & @container to css atDirectives
   "css.customData": [
     ".vscode/css-data.json"
@@ -16,6 +19,7 @@
   "emmet.extensionsPath": [
     ".vscode/emmet"
   ],
+  "eslint.format.enable": true,
   "i18n-ally.keystyle": "nested",
   "i18n-ally.localesPaths": "locales",
   "i18n-ally.sortKeys": true,
