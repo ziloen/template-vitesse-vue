@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 
-import { useT } from '~/composables/useT'
+import { useI18n } from '~/composables'
 
 type Props = {
   size?: number
@@ -46,7 +46,7 @@ const JsxExample2 = defineComponent((
   const inputVal = ref('test')
   const show = ref(false)
   const el = ref<HTMLDivElement | null>(null)
-  const { t } = useT()
+  const { t } = useI18n()
 
   onMounted(() => {
     console.log('TSX Example2 Mounted')

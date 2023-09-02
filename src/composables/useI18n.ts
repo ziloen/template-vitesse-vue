@@ -2,7 +2,7 @@ import { useTranslation } from 'i18next-vue'
 import { Fragment, VNode, cloneVNode, h, isVNode } from 'vue'
 
 
-export function useT() {
+export function useI18n() {
   const { t } = useTranslation()
 
   function tFunc(key: string): string
@@ -29,8 +29,6 @@ export function useT() {
     if (fnData.size === 0 && vnodeData.size === 0) return t(key, originData)
 
     const text = t(key, originData)
-
-    console.log({ text, vnodeData })
 
     const regex = /<(\w+)>(.*?)<\/\1>|{{(\w+)}}/g
     let match

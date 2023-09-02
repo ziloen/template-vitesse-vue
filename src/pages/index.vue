@@ -12,9 +12,9 @@
 
 <script setup lang="ts">
 import { h } from 'vue'
-import { useT } from '~/composables/useT'
+import { useI18n } from '~/composables'
 
-const { t } = useT()
+const { t } = useI18n()
 
 const testMsg = t('useTTest', {
   link: h('a', { class: 'text-blue' }),
