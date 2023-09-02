@@ -4,5 +4,6 @@
     "submit": "Submit"
   },
   "contactUsLink": "Click <link>here</link> to contact us",
-  "hello": "Hello {name}!"
+  "hello": "Hello {{name}}!",
+  "useTTest": "<link>here</link> to test the tag, and {{name}} to test the variable."
 }

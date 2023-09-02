@@ -1,9 +1,9 @@
+import { useTranslation } from 'i18next-vue'
 import { Fragment, VNode, cloneVNode, h, isVNode } from 'vue'
-import { useI18n } from 'vue-i18n'
 
 
 export function useT() {
-  const { t } = useI18n()
+  const { t } = useTranslation()
 
   function tFunc(key: string): string
   function tFunc(key: string,
@@ -29,6 +29,8 @@ export function useT() {
     if (fnData.size === 0 && vnodeData.size === 0) return t(key, originData)
 
     const text = t(key, originData)
+
+    console.log({ text, vnodeData })
 
     const regex = /<(\w+)>(.*?)<\/\1>|{{(\w+)}}/g
     let match
@@ -56,15 +58,18 @@ export function useT() {
           }
         }
       } else if (variable) {
+        console.log(variable)
         const vnode = vnodeData.get(variable)
-
         if (vnode) {
-          result.push(vnode)
+          result.push(cloneVNode(vnode))
         } else {
           result.push(full)
         }
       }
     }
+
+    const after = text.slice(lastIndex)
+    if (after) result.push(after)
 
     return h(Fragment, null, result)
   }

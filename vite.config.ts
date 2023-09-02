@@ -1,6 +1,5 @@
 /// <reference types="vitest" />
 
-import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite'
 import legacy from '@vitejs/plugin-legacy'
 import Vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
@@ -56,16 +55,6 @@ export default defineConfig(({ command, mode }) => {
           defineModel: true,
           propsDestructure: true
         }
-      }),
-
-      // https://github.com/intlify/bundle-tools/tree/main/packages/unplugin-vue-i18n
-      VueI18nPlugin({
-        runtimeOnly: true,
-        compositionOnly: true,
-        fullInstall: false,
-        escapeHtml: false,
-        strictMessage: false,
-        include: path.resolve(__dirname, 'locales/**'),
       }),
 
       // https://github.com/vitejs/vite-plugin-vue/blob/main/packages/plugin-vue-jsx

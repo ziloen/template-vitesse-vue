@@ -4,17 +4,23 @@
 
     <Counter :initial="0" />
 
-    <div>{{ t("hello", { name: "World" }) }}</div>
-
-    <div>{{ t("contactUsLink", { link: (text: string) => h("a", { class: "link-btn" }, text) }) }}</div>
+    <div>
+      <testMsg />
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { useI18n } from 'vue-i18n'
 import { h } from 'vue'
+import { useT } from '~/composables/useT'
 
-const { t } = useI18n()
+const { t } = useT()
+
+const testMsg = t('useTTest', {
+  link: h('a', { class: 'text-blue' }),
+  // name: 'useTTest'
+  name: h('span', { class: 'text-green' }, 'Dynamic Name')
+})
 </script>
 
 <style scoped lang="scss"></style>
