@@ -51,7 +51,7 @@
     // "incremental": true,
     "skipLibCheck": true,
     "stripInternal": true,
-    "moduleResolution": "node",
+    "moduleResolution": "Bundler",
     "noEmit": true,
     "resolveJsonModule": true,
     "forceConsistentCasingInFileNames": true,

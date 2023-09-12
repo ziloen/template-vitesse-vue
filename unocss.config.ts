@@ -6,8 +6,13 @@ import {
   transformerDirectives,
   transformerVariantGroup,
 } from 'unocss'
+import presetTheme from 'unocss-preset-theme'
+import { Theme } from 'unocss/preset-uno'
 
-export default defineConfig({
+
+
+// eslint-disable-next-line @typescript-eslint/no-unnecessary-type-arguments
+export default defineConfig<Theme>({
   rules: [
     ['anchor-auto', { 'overflow-anchor': 'auto' }],
     ['anchor-none', { 'overflow-anchor': 'none' }],
@@ -46,7 +51,6 @@ export default defineConfig({
     presetUno({
       arbitraryVariants: false,
     }),
-    // presetAttributify(),
     presetIcons({
       scale: 1.2,
       warn: true
@@ -57,6 +61,20 @@ export default defineConfig({
         serif: 'DM Serif Display',
         mono: 'Fira Code'
       }
+    }),
+    presetTheme<Theme>({
+      theme: {
+        light: {
+          colors: {
+            primary: '#3b82f6',
+          }
+        },
+        dark: {
+          colors: {
+            primary: '#90cdf4',
+          }
+        }
+      }
     })
   ],
   transformers: [
@@ -65,9 +83,4 @@ export default defineConfig({
     /* support `dark:(text-white bg-black)` and `text-(xl white)` */
     transformerVariantGroup(),
   ],
-  theme: {
-    colors: {
-
-    }
-  }
 })
