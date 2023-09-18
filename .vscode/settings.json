@@ -8,7 +8,7 @@
   ],
   "editor.codeActionsOnSave": [
     // only sort imports
-    // "source.sortImports",
+    "source.sortImports",
     // remove unused imports & sort imports
     // "source.organizeImports",
     "source.fixAll.eslint",
@@ -40,5 +40,6 @@
     "/src/styles/!(variables)",
     "/src/styles/!(variables)/**/*",
     "/src/styles/variables/!(index.module.scss)"
-  ]
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib"
 }

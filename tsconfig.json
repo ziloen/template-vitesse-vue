@@ -87,7 +87,12 @@
       "~cwd/*": [
         "./*"
       ],
-    }
+    },
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules"
+      }
+    ]
   },
   "vueCompilerOptions": {
     // vue version (default: "auto")
