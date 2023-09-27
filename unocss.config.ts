@@ -14,14 +14,22 @@ import { Theme } from 'unocss/preset-uno'
 // eslint-disable-next-line @typescript-eslint/no-unnecessary-type-arguments
 export default defineConfig<Theme>({
   rules: [
+    // oveflow-anchor
     ['anchor-auto', { 'overflow-anchor': 'auto' }],
     ['anchor-none', { 'overflow-anchor': 'none' }],
+
+    // flex
     ['flex-center', { display: 'flex', 'justify-content': 'center', 'align-items': 'center' }],
     ['flex-between', { display: 'flex', 'justify-content': 'space-between' }],
     ['flex-align', { display: 'flex', 'align-items': 'center' }],
     ['flex-justify', { display: 'flex', 'justify-content': 'center' }],
     ['flex-stretch', { display: 'flex', 'align-items': 'stretch' }],
     ['flex-column', { display: 'flex', 'flex-direction': 'column' }],
+
+    // word-wrap
+    ['word-wrap-normal', { 'word-wrap': 'normal' }],
+    ['word-wrap-break', { 'word-wrap': 'break-word' }],
+    ['word-wrap-anywhere', { 'word-wrap': 'anywhere' }],
 
     // grid-col-[start]/[end]
     [/^grid-col-(\d\/\d)/, match => {
@@ -37,6 +45,7 @@ export default defineConfig<Theme>({
 
     ['h-grow', { height: 'min-content', 'flex-grow': 1 }],
     ['w-grow', { width: 'min-content', 'flex-grow': 1 }],
+
     ['resizable', { resize: 'both', overflow: 'hidden' }]
   ],
   shortcuts: [
