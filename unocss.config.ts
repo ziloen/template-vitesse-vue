@@ -7,30 +7,13 @@ import {
   transformerVariantGroup,
 } from 'unocss'
 import presetTheme from 'unocss-preset-theme'
+import { presetZiloen } from 'unocss-preset-ziloen'
 import { Theme } from 'unocss/preset-uno'
-
 
 
 // eslint-disable-next-line @typescript-eslint/no-unnecessary-type-arguments
 export default defineConfig<Theme>({
   rules: [
-    // oveflow-anchor
-    ['anchor-auto', { 'overflow-anchor': 'auto' }],
-    ['anchor-none', { 'overflow-anchor': 'none' }],
-
-    // flex
-    ['flex-center', { display: 'flex', 'justify-content': 'center', 'align-items': 'center' }],
-    ['flex-between', { display: 'flex', 'justify-content': 'space-between' }],
-    ['flex-align', { display: 'flex', 'align-items': 'center' }],
-    ['flex-justify', { display: 'flex', 'justify-content': 'center' }],
-    ['flex-stretch', { display: 'flex', 'align-items': 'stretch' }],
-    ['flex-column', { display: 'flex', 'flex-direction': 'column' }],
-
-    // word-wrap
-    ['word-wrap-normal', { 'word-wrap': 'normal' }],
-    ['word-wrap-break', { 'word-wrap': 'break-word' }],
-    ['word-wrap-anywhere', { 'word-wrap': 'anywhere' }],
-
     // grid-col-[start]/[end]
     [/^grid-col-(\d\/\d)/, match => {
       const [num1, num2] = match[1]!.split('/')
@@ -60,6 +43,7 @@ export default defineConfig<Theme>({
     presetUno({
       arbitraryVariants: false,
     }),
+    presetZiloen(),
     presetIcons({
       scale: 1.2,
       warn: true
