@@ -185,6 +185,8 @@ export default defineConfig(({ command, mode }) => {
     ],
 
     css: {
+      devSourcemap: true,
+
       // TODO: investigate lightningcss when stable https://github.com/vitejs/vite/discussions/13835
       postcss: {
         plugins: [PostcssPresetEnv({ stage: 0 })]
