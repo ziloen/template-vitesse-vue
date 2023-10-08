@@ -41,5 +41,7 @@
     "/src/styles/!(variables)/**/*",
     "/src/styles/variables/!(index.module.scss)"
   ],
+  // https://github.com/mrmckeb/typescript-plugin-css-modules?tab=readme-ov-file#visual-studio-code
+  // ts css module plugin support
   "typescript.tsdk": "node_modules/typescript/lib"
 }

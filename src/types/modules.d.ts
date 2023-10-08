@@ -29,12 +29,5 @@ declare module 'axios' {
 }
 
 
-import type EN from '../../locales/en.json'
-
-declare module 'vue-i18n' {
-  type ENJSON = typeof EN
-  export interface DefineLocaleMessage extends ENJSON { }
-}
-
 export { }
 
