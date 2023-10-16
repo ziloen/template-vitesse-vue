@@ -76,8 +76,8 @@ const JsxExample2 = defineComponent((
 
       <p>`v-if` & `v-on/@` & `v-for` is not supported</p>
 
-      <p>{t('contactUsLink', { link: text => <span class="text-blue-4">{text}</span> })}</p>
-      <p>{t('hello')}</p>
+      <p>{t('contactUsLink', { link: <span class="text-blue-4" /> })}</p>
+      <p>{t('hello', { name: 'Dynamic Name' })}</p>
     </div>
   )
 })

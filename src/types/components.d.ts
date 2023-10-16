@@ -12,5 +12,6 @@ declare module 'vue' {
     Motion: typeof import('motion/vue')['Motion']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    ThemeToggle: typeof import('./../components/ThemeToggle.vue')['default']
   }
 }

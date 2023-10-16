@@ -7,9 +7,9 @@ export function useI18n() {
 
   function tFunc(key: string): string
   function tFunc(key: string,
-    data: Record<string, ((text: string) => VNode) | VNode | JSX.Element>
+    data: Record<string, ((text: string) => VNode) | VNode | JSX.Element | string>
   ): VNode
-  function tFunc(key: string, data?: Record<string, ((text: string) => VNode) | VNode>) {
+  function tFunc(key: string, data?: Record<string, ((text: string) => VNode) | VNode | JSX.Element | string>) {
     if (!data) return t(key)
 
     const fnData = new Map<string, (text: string) => VNode>()
