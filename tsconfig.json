@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "module": "ESNext",
-    "target": "ESNext",
+    "target": "ES2022",
     "jsx": "preserve",
     "jsxImportSource": "vue",
     /** 
@@ -99,7 +99,8 @@
     // vue version (default: "auto")
     // "target": 3.3,
     // strict type check for Component tag and Props types (BUG，not working with svg, off)
-    // "strictTemplates": true,
+    "strictTemplates": true,
+    "jsxSlots": true,
     // "jsxTemplates": false,
     // "skipTemplateCodegen": false,
     // link class for style block without scoped
@@ -107,7 +108,13 @@
   },
   "exclude": [
     "dist",
-    "node_modules",
+    "node_modules"
+  ],
+  "include": [
+    "src",
+    // config files
+    "vite.config.ts",
+    ".eslintrc.js",
     "volar.config.js"
   ]
 }
