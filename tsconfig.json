@@ -76,6 +76,7 @@
     ],
     "types": [
       "vite/client",
+      "unplugin-vue-macros/macros-global",
       "ts-lib-enhance",
       "ts-lib-enhance/highlight",
       "ts-lib-enhance/view-transition",
@@ -105,6 +106,9 @@
     // "skipTemplateCodegen": false,
     // link class for style block without scoped
     "experimentalResolveStyleCssClasses": "always",
+    "plugins": [
+      "@vue-macros/volar/jsx-directive"
+    ]
   },
   "exclude": [
     "dist",

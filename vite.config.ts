@@ -8,6 +8,7 @@ import PostcssPresetEnv from 'postcss-preset-env'
 import Unocss from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
+import VueMacros from 'unplugin-vue-macros/vite'
 import VueRoute from 'unplugin-vue-router/vite'
 import { defineConfig } from 'vite'
 
@@ -49,18 +50,22 @@ export default defineConfig(({ command, mode }) => {
         importMode: 'async'
       }),
 
-      // https://github.com/vitejs/vite-plugin-vue/tree/main/packages/plugin-vue
-      Vue({
-        script: {
-          defineModel: true,
-          propsDestructure: true
+      // https://github.com/vue-macros/vue-macros
+      VueMacros({
+        plugins: {
+          // https://github.com/vitejs/vite-plugin-vue/tree/main/packages/plugin-vue
+          vue: Vue({
+            script: {
+              defineModel: true,
+              propsDestructure: true
+            }
+          }),
+          // https://github.com/vitejs/vite-plugin-vue/blob/main/packages/plugin-vue-jsx
+          vueJsx: vueJsx({
+            optimize: true,
+            transformOn: true
+          }),
         }
-      }),
-
-      // https://github.com/vitejs/vite-plugin-vue/blob/main/packages/plugin-vue-jsx
-      vueJsx({
-        optimize: true,
-        transformOn: true
       }),
 
       // https://github.com/antfu/unplugin-auto-import
@@ -79,9 +84,9 @@ export default defineConfig(({ command, mode }) => {
               'onBeforeUnmount',
               'onBeforeUpdate',
               'onMounted',
+              'onScopeDispose',
               'onUnmounted',
               'onUpdated',
-              'onScopeDispose',
               'provide',
               'reactive',
               'readonly',
@@ -98,19 +103,14 @@ export default defineConfig(({ command, mode }) => {
               'watchPostEffect',
               'watchSyncEffect'
             ],
-
             'vue-router': [
               'useRoute',
               'useRouter'
             ],
-
-            // 'vue/macros',
-
             '@vueuse/core': [
               'unrefElement',
               'useVModel'
             ],
-
             ulid: ['ulid']
           }
         ],
