@@ -5,12 +5,8 @@ export default [
   ...vue,
   ...format,
   {
-    files: ['**/*.vue'],
-    languageOptions: {
-      parserOptions: {
-        project: './tsconfig.json',
-        extraFileExtensions: ['.vue']
-      }
-    }
+    ignores: [
+      'volar.config.js',
+    ]
   }
 ]
