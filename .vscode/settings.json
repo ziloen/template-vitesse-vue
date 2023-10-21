@@ -19,6 +19,7 @@
   "emmet.extensionsPath": [
     ".vscode/emmet"
   ],
+  "eslint.experimental.useFlatConfig": true,
   "eslint.format.enable": true,
   "eslint.validate": [
     "javascript",

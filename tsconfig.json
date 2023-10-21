@@ -118,7 +118,7 @@
     "src",
     // config files
     "vite.config.ts",
-    ".eslintrc.js",
+    "eslint.config.js",
     "volar.config.js"
   ]
 }
