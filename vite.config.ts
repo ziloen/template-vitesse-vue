@@ -141,6 +141,11 @@ export default defineConfig(({ command, mode }) => {
         // polyfills: [],
         /** polyfills for modern browsers (supports esm) */
         modernPolyfills: [
+          // proposals
+          /** Array.fromAsync() */
+          'esnext.array.from-async',
+          'proposals/set-methods',
+
           // Web APIs
           /** structuredClone() */
           'web.structured-clone',
