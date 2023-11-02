@@ -191,7 +191,9 @@ export default defineConfig(({ command, mode }) => {
 
     build: {
       // disable inline base64
-      assetsInlineLimit: 0
+      assetsInlineLimit: 0,
+      minify: 'esbuild',
+      cssMinify: 'lightningcss',
     },
 
     css: {
@@ -200,6 +202,10 @@ export default defineConfig(({ command, mode }) => {
       // TODO: investigate lightningcss when stable https://github.com/vitejs/vite/discussions/13835
       postcss: {
         plugins: [PostcssPresetEnv({ stage: 0 })]
+      },
+
+      lightningcss: {
+
       },
 
       preprocessorOptions: {

@@ -1,5 +1,5 @@
 import { useTranslation } from 'i18next-vue'
-import { Fragment, VNode, cloneVNode, h, isVNode } from 'vue'
+import { Fragment, VNode, cloneVNode, createVNode, h, isVNode } from 'vue'
 
 
 export function useI18n() {
@@ -50,13 +50,12 @@ export function useI18n() {
           const vnode = vnodeData.get(tag)
 
           if (vnode) {
-            result.push(cloneVNode(vnode, { innerHTML: content }))
+            result.push(createVNode(vnode, null, content))
           } else {
             result.push(content!)
           }
         }
       } else if (variable) {
-        console.log(variable)
         const vnode = vnodeData.get(variable)
         if (vnode) {
           result.push(cloneVNode(vnode))
@@ -69,7 +68,7 @@ export function useI18n() {
     const after = text.slice(lastIndex)
     if (after) result.push(after)
 
-    return h(Fragment, null, result)
+    return h(Fragment, result)
   }
 
   return {
