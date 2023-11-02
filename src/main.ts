@@ -3,6 +3,7 @@ import 'uno.css'
 import './styles/atom.scss'
 import './styles/main.css'
 
+import { createHead } from '@unhead/vue'
 import i18next from 'i18next'
 import I18NextVue from 'i18next-vue'
 import { createPinia } from 'pinia'
@@ -33,4 +34,5 @@ createApp(App)
     i18next
   })
   .use(createPinia())
+  .use(createHead())
   .mount('#app')
