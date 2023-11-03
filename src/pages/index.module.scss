@@ -1,0 +1,23 @@
+// This class name will be changed in css modules
+.this-will-add-a-hash {
+
+  // add :global to make it preserve the original class name
+  :global(.this-will-not-be-changed) {
+    color: red;
+
+    .this-will-change {
+      color: blue;
+    }
+  }
+
+  // every class name in this block will not be changed
+  :global {
+    .this-will-not-be-changed-either {
+      color: red;
+
+      .this-will-not-be-changed-either {
+        color: blue;
+      }
+    }
+  }
+}
