@@ -30,9 +30,7 @@ i18next.init({
 
 createApp(App)
   .use(router)
-  .use(I18NextVue, {
-    i18next
-  })
+  .use(I18NextVue, { i18next })
   .use(createPinia())
   .use(createHead())
   .mount('#app')

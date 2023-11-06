@@ -1,0 +1,9 @@
+{
+  "button": {
+    "cancel": "取消",
+    "submit": "提交"
+  },
+  "contactUsLink": "點擊<link>這裏</link>聯係我們",
+  "hello": "你好 {{name}}!",
+  "useTTest": "<link>這裏</link>測試標簽，這裏{{name}}測試變量"
+}
