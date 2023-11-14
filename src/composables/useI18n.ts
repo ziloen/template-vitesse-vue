@@ -3,7 +3,7 @@ import { Fragment, VNode, cloneVNode, createVNode, h, isVNode } from 'vue'
 
 
 export function useI18n() {
-  const { t } = useTranslation()
+  const { t, i18next } = useTranslation()
 
   function tFunc(key: string): string
   function tFunc(key: string,
@@ -72,6 +72,7 @@ export function useI18n() {
   }
 
   return {
-    t: tFunc
+    t: tFunc,
+    i18next
   }
 }
