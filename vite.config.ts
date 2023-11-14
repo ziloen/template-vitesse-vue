@@ -144,6 +144,7 @@ export default defineConfig(({ command, mode }) => {
           // proposals
           /** Array.fromAsync() */
           'esnext.array.from-async',
+          'esnext.promise.with-resolvers',
           'proposals/set-methods',
 
           // Web APIs
@@ -171,20 +172,20 @@ export default defineConfig(({ command, mode }) => {
           'esnext.array.with',
 
           // ES2022
-          /** Array.prototype.at() */
-          'es.array.at',
-          /** String.prototype.at() */
-          'es.string.at-alternative',
-          /** TypedArray.prototype.at() */
-          'es.typed-array.at',
-          /** Object.hasOwn */
-          'es.object.has-own',
           /** AggregateError */
           'es.aggregate-error',
           /** AggregateError: cause */
           'es.aggregate-error.cause',
+          /** Array.prototype.at() */
+          'es.array.at',
           /** Error: cause */
-          'es.error.cause'
+          'es.error.cause',
+          /** Object.hasOwn */
+          'es.object.has-own',
+          /** String.prototype.at() */
+          'es.string.at-alternative',
+          /** TypedArray.prototype.at() */
+          'es.typed-array.at',
         ]
       })
     ],
