@@ -210,6 +210,7 @@ export default defineConfig(({ command, mode }) => {
 
       preprocessorOptions: {
         scss: {
+          // sass global variables
           additionalData: `@use "~/styles/variables/index.module.scss" as *;`
         }
       }
