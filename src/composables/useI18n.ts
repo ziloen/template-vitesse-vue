@@ -2,6 +2,19 @@ import { useTranslation } from 'i18next-vue'
 import { Fragment, VNode, cloneVNode, createVNode, h, isVNode } from 'vue'
 
 
+/**
+ * Custom i18n composable
+ * @example
+ * ```tsx
+ * const { t } = useI18n()
+ * 
+ * const hello = t("hello", { 
+ *   bold: text => <span class="font-bold">{text}</span>,
+ *   blue: <span class="text-blue" />,
+ *   name: "John"
+ * })
+ * ```
+ */
 export function useI18n() {
   const { t, i18next } = useTranslation()
 
@@ -12,7 +25,9 @@ export function useI18n() {
   function tFunc(key: string, data?: Record<string, ((text: string) => VNode) | VNode | JSX.Element | string>) {
     if (!data) return t(key)
 
+    // text => <span class="text-blue">{text}</span>
     const fnData = new Map<string, (text: string) => VNode>()
+    // <span class="text-blue" />
     const vnodeData = new Map<string, VNode>()
     const originData = {} as Record<string, string>
 
@@ -26,33 +41,42 @@ export function useI18n() {
       }
     }
 
+    // no custom render
     if (fnData.size === 0 && vnodeData.size === 0) return t(key, originData)
 
     const text = t(key, originData)
 
     const regex = /<(\w+)>(.*?)<\/\1>|{{(\w+)}}/g
-    let match
+    let matched
     const result: (VNode | string)[] = []
     let lastIndex = 0
 
-    while ((match = regex.exec(text)) !== null) {
-      const [full, tag, content, variable] = match
-      const before = text.slice(lastIndex, match.index)
-      lastIndex = regex.lastIndex
-
+    while ((matched = regex.exec(text)) !== null) {
+      const [full, tagName, content, variable] = matched
+      // text between the last match and this one
+      const before = text.slice(lastIndex, matched.index)
+      // push everything between the last match and this one
       if (before) result.push(before)
 
-      if (tag) {
-        const render = fnData.get(tag) ?? vnodeData.get(tag)
+      // update the index of the last match
+      lastIndex = regex.lastIndex
+
+      // <tagName>content</tagName>
+      if (tagName) {
+        const render = fnData.get(tagName) ?? vnodeData.get(tagName)
         result.push(getRendered(render, content!))
-      } else if (variable) {
+      }
+
+      // {{variable}}
+      else if (variable) {
         const vnode = vnodeData.get(variable)
         result.push(vnode ? cloneVNode(vnode) : full)
       }
     }
 
-    const after = text.slice(lastIndex)
-    if (after) result.push(after)
+    // push everything after the last match
+    const textLeft = text.slice(lastIndex)
+    if (textLeft) result.push(textLeft)
 
     return h(Fragment, result)
   }
