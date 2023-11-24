@@ -3,6 +3,10 @@
   touch-action: manipulation;
 }
 
+:root {
+  color-scheme: light dark;
+}
+
 html,
 body {
   height: 100%;
@@ -14,9 +18,13 @@ body {
   @apply font-sans;
 }
 
+html {
+  background: light-dark(#fff, #121212);
+  color: light-dark(#000, #fff);
+}
+
 html.dark {
-  background: #121212;
-  color: white;
+  color-scheme: dark;
 }
 
 #app {

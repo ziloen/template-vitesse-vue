@@ -43,25 +43,11 @@ export function useI18n() {
       if (before) result.push(before)
 
       if (tag) {
-        const fn = fnData.get(tag)
-        if (fn) {
-          result.push(fn(content!))
-        } else {
-          const vnode = vnodeData.get(tag)
-
-          if (vnode) {
-            result.push(createVNode(vnode, null, content))
-          } else {
-            result.push(content!)
-          }
-        }
+        const render = fnData.get(tag) ?? vnodeData.get(tag)
+        result.push(getRendered(render, content!))
       } else if (variable) {
         const vnode = vnodeData.get(variable)
-        if (vnode) {
-          result.push(cloneVNode(vnode))
-        } else {
-          result.push(full)
-        }
+        result.push(vnode ? cloneVNode(vnode) : full)
       }
     }
 
@@ -75,4 +61,14 @@ export function useI18n() {
     t: tFunc,
     i18next
   }
+}
+
+
+/**
+ * Get rendered content
+ */
+function getRendered(render: ((content: string) => VNode) | VNode | undefined, content: string) {
+  if (!render) return content
+  if (typeof render === 'function') return render(content)
+  return createVNode(render, null, content)
 }
