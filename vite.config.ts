@@ -10,7 +10,8 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import VueMacros from 'unplugin-vue-macros/vite'
 import VueRoute from 'unplugin-vue-router/vite'
-import { defineConfig } from 'vite'
+import { Plugin, defineConfig } from 'vite'
+
 
 export default defineConfig(({ command, mode }) => {
   const IS_PROD = process.env.NODE_ENV === 'production'
@@ -117,7 +118,7 @@ export default defineConfig(({ command, mode }) => {
         dts: './src/types/auto-imports.d.ts',
         // dirs: ['./src/composables'],
         vueTemplate: true
-      }),
+      }) as Plugin,
 
       // https://github.com/antfu/vite-plugin-components
       Components({
@@ -144,7 +145,9 @@ export default defineConfig(({ command, mode }) => {
           // proposals
           /** Array.fromAsync() */
           'esnext.array.from-async',
+          /** Promise.withResolvers() */
           'esnext.promise.with-resolvers',
+          /** https://github.com/tc39/proposal-set-methods */
           'proposals/set-methods',
 
           // Web APIs

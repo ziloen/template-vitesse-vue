@@ -9,3 +9,66 @@ declare const IS_BUILD: boolean
 // if you need import variable, use `import("bar").foo` instead of `import { foo } from "bar"`
 declare var __VUE__: boolean | undefined
 
+
+interface PromiseConstructor {
+  // TODO: remove when lib.d.ts is updated
+  // https://github.com/microsoft/TypeScript/issues/56483
+  withResolvers<T = unknown>(): {
+    promise: Promise<T>
+    resolve: (value: T) => void
+    reject: (reason?: unknown) => void
+  }
+}
+
+
+// Set methods types
+// https://github.com/tc39/proposal-set-methods
+interface Set<T> {
+  /**
+   * [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Set/difference)
+   */
+  difference<K>(other: Set<K>): Set<T>
+  /**
+   * [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Set/intersection)
+   */
+  intersection<K>(other: Set<K>): Set<T>
+  /**
+   * [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Set/isDisjointFrom)
+   */
+  isDisjointFrom<K>(other: Set<K>): boolean
+  /**
+   * [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Set/isSubsetOf)
+   */
+  isSubsetOf<K>(other: Set<K>): boolean
+  /**
+   * [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Set/isSupersetOf)
+   */
+  isSupersetOf<K>(other: Set<K>): boolean
+  /**
+   * [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Set/symmetricDifference)
+   */
+  symmetricDifference<K>(other: Set<K>): Set<T>
+  /**
+   * [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Set/union)
+   */
+  union<K>(other: Set<K>): Set<T>
+}
+
+
+interface ArrayConstructor {
+  // TODO: remove when lib.d.ts is updated
+  // https://github.com/microsoft/TypeScript/issues/50803
+  /**
+   * Creates an array from an array-like or iterable object.
+   * 
+   * [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/fromAsync)
+   */
+  fromAsync<T>(
+    iterableOrArrayLike: AsyncIterable<T> | Iterable<T | Promise<T>> | ArrayLike<T | Promise<T>>,
+  ): Promise<T[]>
+  fromAsync<T, U>(
+    iterableOrArrayLike: AsyncIterable<T> | Iterable<T> | ArrayLike<T>,
+    mapFn: (value: Awaited<T>) => U,
+    thisArg?: any,
+  ): Promise<Awaited<U>[]>
+}
