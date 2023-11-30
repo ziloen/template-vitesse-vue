@@ -10,7 +10,8 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import VueMacros from 'unplugin-vue-macros/vite'
 import VueRoute from 'unplugin-vue-router/vite'
-import { Plugin, defineConfig } from 'vite'
+import type { Plugin } from 'vite'
+import { defineConfig } from 'vite'
 
 
 export default defineConfig(({ command, mode }) => {
@@ -149,6 +150,10 @@ export default defineConfig(({ command, mode }) => {
           'esnext.promise.with-resolvers',
           /** https://github.com/tc39/proposal-set-methods */
           'proposals/set-methods',
+          /** https://github.com/tc39/proposal-iterator-helpers */
+          'proposals/iterator-helpers',
+          /** https://github.com/tc39/proposal-async-iterator-helpers */
+          'proposals/async-iterator-helpers',
 
           // Web APIs
           /** structuredClone() */
