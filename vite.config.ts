@@ -136,7 +136,7 @@ export default defineConfig(({ command, mode }) => {
       }),
 
       // https://github.com/vitejs/vite/tree/main/packages/plugin-legacy
-      legacy({
+      IS_BUILD && legacy({
         // render legacy chunks for non-modern browsers
         renderLegacyChunks: false,
         /** polyfills for non-modern browsers (not supports esm) */
@@ -210,12 +210,11 @@ export default defineConfig(({ command, mode }) => {
 
       // TODO: investigate lightningcss when stable https://github.com/vitejs/vite/discussions/13835
       postcss: {
-        plugins: [PostcssPresetEnv({ stage: 0 })]
+        plugins: IS_BUILD ? [PostcssPresetEnv({ stage: 0 })] : []
       },
 
-      lightningcss: {
-
-      },
+      // lightningcss: {
+      // },
 
       preprocessorOptions: {
         scss: {
