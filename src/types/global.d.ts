@@ -23,6 +23,7 @@ interface PromiseConstructor {
 
 // Set methods types
 // https://github.com/tc39/proposal-set-methods
+// https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Set#set_composition
 interface Set<T> {
   /**
    * [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Set/difference)
