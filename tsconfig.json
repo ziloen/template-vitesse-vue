@@ -117,6 +117,7 @@
   ],
   "include": [
     "src",
+    "test",
     // config files
     "vite.config.ts",
     "eslint.config.js",

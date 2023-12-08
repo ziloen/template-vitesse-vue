@@ -1,4 +1,5 @@
-import { type PageParams, request } from '~/api'
+import type { PageParams } from '~/api'
+import { request } from '~/api'
 
 export type Post = {
   userID: number
@@ -7,7 +8,8 @@ export type Post = {
   body: string
 }
 
-/** 获取全部 Post
+/** 
+ * 获取全部 Post
  * @returns
  */
 export async function getPostList() {
