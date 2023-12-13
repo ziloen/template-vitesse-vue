@@ -119,8 +119,9 @@
     "src",
     "test",
     // config files
-    "vite.config.ts",
     "eslint.config.js",
-    "volar.config.js"
+    "unocss.config.ts",
+    "vite.config.ts",
+    "volar.config.js",
   ]
 }

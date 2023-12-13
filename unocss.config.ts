@@ -8,11 +8,13 @@ import {
 } from 'unocss'
 import presetTheme from 'unocss-preset-theme'
 import { presetZiloen } from 'unocss-preset-ziloen'
-import { Theme } from 'unocss/preset-uno'
+import type { Theme } from 'unocss/preset-uno'
 
 
 // eslint-disable-next-line @typescript-eslint/no-unnecessary-type-arguments
 export default defineConfig<Theme>({
+  theme: {
+  },
   rules: [
     // grid-col-[start]/[end]
     [/^grid-col-(\d\/\d)/, match => {
