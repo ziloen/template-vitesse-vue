@@ -135,6 +135,8 @@ export default defineConfig(({ command, mode }) => {
         mode: 'global'
       }),
 
+      // TODO: polyfill for web apis like `:has` query selector
+
       // https://github.com/vitejs/vite/tree/main/packages/plugin-legacy
       IS_BUILD && legacy({
         // render legacy chunks for non-modern browsers

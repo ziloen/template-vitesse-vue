@@ -14,6 +14,9 @@ import type { Theme } from 'unocss/preset-uno'
 // eslint-disable-next-line @typescript-eslint/no-unnecessary-type-arguments
 export default defineConfig<Theme>({
   theme: {
+    colors: {
+      test: 'light-dark(blue, green)'
+    }
   },
   rules: [
     // grid-col-[start]/[end]
