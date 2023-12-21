@@ -207,6 +207,10 @@ export default defineConfig(({ command, mode }) => {
       cssMinify: 'lightningcss',
     },
 
+    esbuild: {
+      drop: IS_DEV ? [] : ['console', 'debugger'],
+    },
+
     css: {
       devSourcemap: true,
 
