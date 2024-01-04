@@ -2,6 +2,8 @@
   <div class="flex col items-center">
     <Motion class="py-4" />
 
+    <SvgIcon name="favicon" class="w-50px h-50px text-blue" />
+
     <Counter :initial="0" />
 
     <div>

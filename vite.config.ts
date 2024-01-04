@@ -7,6 +7,7 @@ import path from 'node:path'
 import PostcssPresetEnv from 'postcss-preset-env'
 import Unocss from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
+import SvgComponent from 'unplugin-svg-component/vite'
 import Components from 'unplugin-vue-components/vite'
 import VueMacros from 'unplugin-vue-macros/vite'
 import VueRoute from 'unplugin-vue-router/vite'
@@ -28,10 +29,12 @@ export default defineConfig(({ command, mode }) => {
     },
 
     define: {
+      // https://github.com/vuejs/core/blob/main/packages/vue/README.md#bundler-build-feature-flags
       /** Options API support */
       __VUE_OPTIONS_API__: false,
-      /** production devtools support */
+      /** production devtools */
       __VUE_PROD_DEVTOOLS__: false,
+      __VUE_PROD_HYDRATION_MISMATCH_DETAILS__: false,
       /** is production mode */
       IS_PROD,
       /** is development mode */
@@ -127,6 +130,16 @@ export default defineConfig(({ command, mode }) => {
         resolvers: [
           name => name === 'Motion' ? { name, from: 'motion/vue' } : undefined
         ]
+      }),
+
+      // https://github.com/Jevon617/unplugin-svg-component
+      SvgComponent({
+        iconDir: path.resolve('src/assets/svg-icons'),
+        dts: true,
+        dtsDir: path.resolve('src/types'),
+        componentStyle: '',
+        vueVersion: 3,
+        projectType: 'vue',
       }),
 
       // https://github.com/antfu/unocss
