@@ -137,7 +137,7 @@ export default defineConfig(({ command, mode }) => {
         iconDir: path.resolve('src/assets/svg-icons'),
         dts: true,
         dtsDir: path.resolve('src/types'),
-        componentStyle: '',
+        componentStyle: 'width: 1em; height: 1em;',
         vueVersion: 3,
         projectType: 'vue',
       }),
