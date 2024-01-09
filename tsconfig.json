@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
+    "baseUrl": "./",
     "module": "ESNext",
     "target": "ES2022",
     "jsx": "preserve",
@@ -28,11 +28,11 @@
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "exactOptionalPropertyTypes": true,
-    // "noImplicitReturns": true,
+    "noImplicitReturns": false,
     // "noFallthroughCasesInSwitch": false,
     "noUncheckedIndexedAccess": true,
     "noImplicitOverride": true,
-    // "noPropertyAccessFromIndexSignature": false,
+    "noPropertyAccessFromIndexSignature": true,
     // "allowUnusedLabels": true,
     // "allowUnreachableCode": true,
     /**

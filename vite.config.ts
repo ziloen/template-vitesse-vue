@@ -43,6 +43,12 @@ export default defineConfig(({ command, mode }) => {
       IS_BUILD
     },
 
+    server: {
+      fs: {
+        strict: true
+      }
+    },
+
     plugins: [
       // https://github.com/posva/unplugin-vue-router
       VueRoute({
