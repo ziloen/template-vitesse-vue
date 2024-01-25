@@ -235,7 +235,17 @@ export default defineConfig(({ command, mode }) => {
 
       // TODO: investigate lightningcss when stable https://github.com/vitejs/vite/discussions/13835
       postcss: {
-        plugins: IS_BUILD ? [PostcssPresetEnv({ stage: 0 })] : []
+        plugins: [
+          // https://github.com/csstools/postcss-plugins/tree/main/plugin-packs/postcss-preset-env#options
+          PostcssPresetEnv({
+            // Only enable polyfills specifed in "features"
+            stage: false,
+            features: {
+              'nesting-rules': true,
+              'media-query-ranges': true,
+            },
+          })
+        ]
       },
 
       // lightningcss: {
