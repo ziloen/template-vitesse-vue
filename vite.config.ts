@@ -240,9 +240,11 @@ export default defineConfig(({ command, mode }) => {
           PostcssPresetEnv({
             // Only enable polyfills specifed in "features"
             stage: false,
+            // https://preset-env.cssdb.org/features/
             features: {
               'nesting-rules': true,
               'media-query-ranges': true,
+              'relative-color-syntax': true,
             },
           })
         ]
