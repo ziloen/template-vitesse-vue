@@ -154,11 +154,11 @@ export default defineConfig(({ command, mode }) => {
       // TODO: polyfill for web apis like `:has` query selector
 
       // https://github.com/vitejs/vite/tree/main/packages/plugin-legacy
-      IS_BUILD && legacy({
+      legacy({
         // render legacy chunks for non-modern browsers
         renderLegacyChunks: false,
         /** polyfills for non-modern browsers (not supports esm) */
-        // polyfills: [],
+        polyfills: false,
         /** polyfills for modern browsers (supports esm) */
         modernPolyfills: [
           // proposals
@@ -212,7 +212,8 @@ export default defineConfig(({ command, mode }) => {
           'es.string.at-alternative',
           /** TypedArray.prototype.at() */
           'es.typed-array.at',
-        ]
+        ],
+        modernTargets: 'chrome>=93, edge>=93, firefox>=91, safari>=15, chromeAndroid>=93, iOS>=15'
       })
     ],
 
