@@ -16,8 +16,8 @@ import { defineConfig } from 'vite'
 
 
 export default defineConfig(({ command, mode }) => {
-  const IS_PROD = process.env.NODE_ENV === 'production'
-  const IS_DEV = process.env.NODE_ENV === 'development'
+  const IS_PROD = process.env['NODE_ENV'] === 'production'
+  const IS_DEV = process.env['NODE_ENV'] === 'development'
   const IS_BUILD = command === 'build'
 
   return {
@@ -133,9 +133,6 @@ export default defineConfig(({ command, mode }) => {
       // https://github.com/antfu/vite-plugin-components
       Components({
         dts: './src/types/components.d.ts',
-        resolvers: [
-          name => name === 'Motion' ? { name, from: 'motion/vue' } : undefined
-        ]
       }),
 
       // https://github.com/Jevon617/unplugin-svg-component
@@ -263,7 +260,7 @@ export default defineConfig(({ command, mode }) => {
 
     // https://vitejs.dev/config/dep-optimization-options.html
     optimizeDeps: {
-      include: ['motion/vue', '@vueuse/core']
+      include: ['@vueuse/core']
     },
 
     // https://github.com/vitest-dev/vitest

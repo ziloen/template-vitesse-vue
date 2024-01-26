@@ -43,6 +43,7 @@ declare global {
 // for vue template auto import
 import { UnwrapRef } from 'vue'
 declare module 'vue' {
+  interface GlobalComponents {}
   interface ComponentCustomProperties {
     readonly computed: UnwrapRef<typeof import('vue')['computed']>
     readonly customRef: UnwrapRef<typeof import('vue')['customRef']>
@@ -81,6 +82,7 @@ declare module 'vue' {
   }
 }
 declare module '@vue/runtime-core' {
+  interface GlobalComponents {}
   interface ComponentCustomProperties {
     readonly computed: UnwrapRef<typeof import('vue')['computed']>
     readonly customRef: UnwrapRef<typeof import('vue')['customRef']>

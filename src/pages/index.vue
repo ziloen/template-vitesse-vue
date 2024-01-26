@@ -1,7 +1,5 @@
 <template>
   <div class="flex col items-center">
-    <Motion class="py-4" />
-
     <SvgIcon name="favicon" class="text-50px text-blue" />
 
     <Counter :initial="0" />
