@@ -47,24 +47,31 @@ export function useI18n() {
     const text = t(key, originData)
 
     const regex = /<(\w+)>(.*?)<\/\1>|{{(\w+)}}/g
-    let matched
     const result: (VNode | string)[] = []
     let lastIndex = 0
 
-    while ((matched = regex.exec(text)) !== null) {
-      const [full, tagName, content, variable] = matched
+    for (const matched of text.matchAll(regex)) {
+      if (matched.index === undefined) continue
+      /**
+       * 0: full match, e.g. "<tagName>content</tagName>" or "{{variable}}"
+       * 1: tag name, e.g. "tagName"
+       * 2: tag content, e.g. "content"
+       * 3: variable, e.g. "variable"
+       */
+      const [full, tagName, tagContent, variable] = matched
+
       // text between the last match and this one
       const before = text.slice(lastIndex, matched.index)
       // push everything between the last match and this one
       if (before) result.push(before)
 
       // update the index of the last match
-      lastIndex = regex.lastIndex
+      lastIndex = matched.index + full.length
 
       // <tagName>content</tagName>
       if (tagName) {
         const render = fnData.get(tagName) ?? vnodeData.get(tagName)
-        result.push(getRendered(render, content!))
+        result.push(getRendered(render, tagContent!))
       }
 
       // {{variable}}
