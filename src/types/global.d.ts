@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 /* eslint-disable no-var */
 // @ts-nocheck
-
 declare const IS_PROD: boolean
 declare const IS_DEV: boolean
 declare const IS_BUILD: boolean

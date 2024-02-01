@@ -5,5 +5,5 @@
   },
   "contactUsLink": "点击<link>这里</link>联系我们",
   "hello": "你好 {{name}}!",
-  "useTTest": "<link>这里</link>测试标签，这里{{name}}测试变量"
+  "useI18nTest": "<link>这里</link>测试标签，这里{{name}}测试变量"
 }

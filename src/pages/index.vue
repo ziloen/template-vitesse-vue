@@ -16,9 +16,14 @@ import { useI18n } from '~/composables'
 
 const { t } = useI18n()
 
-const testMsg = t('useTTest', {
-  link: h('a', { class: 'text-blue' }),
-  // name: 'useTTest'
+const testMsg = t('useI18nTest', {
+  link: h('a', {
+    class: 'text-blue',
+    href: 'https://vuejs.org',
+    target: '_blank',
+    rel: 'noopener noreferrer'
+  }),
+  // name: 'useI18nTest'
   name: h('span', { class: 'text-green' }, 'Dynamic Name')
 })
 </script>
