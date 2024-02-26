@@ -14,16 +14,6 @@
       ]
     },
     {
-      "name": "@container",
-      "description": "Container query",
-      "references": [
-        {
-          "name": "MDN",
-          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/@container"
-        }
-      ]
-    },
-    {
       "name": "@tailwind",
       "description": "tailwind directives",
       "references": [
