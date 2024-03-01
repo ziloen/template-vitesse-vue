@@ -1,7 +1,8 @@
-// This class name will be changed in css modules
+/* This class name will be changed in css modules */
 .this-will-add-a-hash {
 
-  // add :global to make it preserve the original class name
+  /* add :global to make it preserve the original class name */
+  /* https://github.com/css-modules/css-modules/blob/master/docs/composition.md#exceptions */
   :global(.this-will-not-be-changed) {
     color: red;
 
@@ -10,7 +11,7 @@
     }
   }
 
-  // every class name in this block will not be changed
+  /* every class name in this block will not be changed */
   :global {
     .this-will-not-be-changed-either {
       color: red;

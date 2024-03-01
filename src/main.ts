@@ -1,6 +1,5 @@
 import '@unocss/reset/tailwind.css'
 import 'uno.css'
-import './styles/atom.scss'
 import './styles/main.css'
 
 import { createHead } from '@unhead/vue'

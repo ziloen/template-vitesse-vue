@@ -3,6 +3,7 @@
 import legacy from '@vitejs/plugin-legacy'
 import Vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
+import { Features } from 'lightningcss'
 import path from 'node:path'
 import PostcssPresetEnv from 'postcss-preset-env'
 import Unocss from 'unocss/vite'
@@ -231,32 +232,13 @@ export default defineConfig(({ command, mode }) => {
     css: {
       devSourcemap: true,
 
-      // TODO: investigate lightningcss when stable https://github.com/vitejs/vite/discussions/13835
-      postcss: {
-        plugins: [
-          // https://github.com/csstools/postcss-plugins/tree/main/plugin-packs/postcss-preset-env#options
-          PostcssPresetEnv({
-            // Only enable polyfills specifed in "features"
-            stage: false,
-            // https://preset-env.cssdb.org/features/
-            features: {
-              'nesting-rules': true,
-              'media-query-ranges': true,
-              'relative-color-syntax': true,
-            },
-          })
-        ]
+      lightningcss: {
+        // https://lightningcss.dev/transpilation.html#feature-flags
+        include:
+          Features.OklabColors |
+          Features.Nesting |
+          Features.MediaRangeSyntax
       },
-
-      // lightningcss: {
-      // },
-
-      preprocessorOptions: {
-        scss: {
-          // sass global variables
-          additionalData: `@use "~/styles/variables/index.module.scss" as *;`
-        }
-      }
     },
 
     // https://vitejs.dev/config/dep-optimization-options.html
