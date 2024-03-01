@@ -14,7 +14,7 @@ export default defineComponent<Props>(({ size }, context) => {
   })
 
   return () => (
-    <div ref={el} class="flex col gap-2">
+    <div ref={el} class="flex flex-col gap-2">
       <div>{counter.value}</div>
       <div>
         <button class="btn" onClick={() => counter.value++}>+1</button>

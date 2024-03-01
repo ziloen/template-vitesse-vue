@@ -1,5 +1,5 @@
 <template>
-  <ol class="flex col gap-4 text-left">
+  <ol class="flex flex-col gap-4 text-left">
     <li v-for="post, i of allPosts" :key="post.id">
       <h1 class="text-2xl">{{ i + 1 }}. {{ post.title }}</h1>
       <p>{{ post.body }}</p>

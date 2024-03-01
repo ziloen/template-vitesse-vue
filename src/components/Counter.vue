@@ -12,7 +12,7 @@ const { count, inc, dec } = useCounter(props.initial)
 
 <template>
   <div>
-    <div class="flex-center col">
+    <div class="flex-center flex-col">
       <span>useCounter: {{ count }}</span>
       <div class="flex gap-2">
         <button class="btn" @click="dec()">-</button>
@@ -20,7 +20,7 @@ const { count, inc, dec } = useCounter(props.initial)
       </div>
     </div>
 
-    <div class="flex-center col">
+    <div class="flex-center flex-col">
       <span>counterStore: {{ counterStore.count }}</span>
       <div class="flex gap-2">
         <button class="btn" :disabled="counterStore.count <= 0" @click="counterStore.decrement(Math.random())">-</button>

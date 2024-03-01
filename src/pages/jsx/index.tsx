@@ -21,7 +21,7 @@ const JsxExample1 = defineComponent<Props>({
     })
 
     return () => {
-      return <div ref={el} class="flex-align col gap-2">
+      return <div ref={el} class="flex-align flex-col gap-2">
         <div>{counter.value}</div>
         <div>
           <button class="btn" onClick={() => counter.value++}>+1</button>
@@ -62,7 +62,7 @@ const JsxExample2 = defineComponent((
   })
 
   return () => (
-    <div ref={el} class="flex-align col gap-2">
+    <div ref={el} class="flex-align flex-col gap-2">
       <div>{counter.value}</div>
       <input class="text-black" type="text" v-model={inputVal.value} />
       <div>
