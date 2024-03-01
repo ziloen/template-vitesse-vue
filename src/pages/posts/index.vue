@@ -10,7 +10,8 @@
 
 
 <script lang="ts" setup>
-import { Post, getPostList } from '~/api/post'
+import type { Post } from '~/api/post'
+import { getPostList } from '~/api/post'
 const loading = ref(false)
 const allPosts = ref<Post[]>([])
 
@@ -19,6 +20,4 @@ getPostList().then(p => allPosts.value = p)
 
 
 
-<style lang="scss" scoped>
-
-</style>
+<style scoped></style>

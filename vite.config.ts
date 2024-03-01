@@ -232,6 +232,8 @@ export default defineConfig(({ command, mode }) => {
     css: {
       devSourcemap: true,
 
+      transformer: 'lightningcss',
+
       lightningcss: {
         // https://lightningcss.dev/transpilation.html#feature-flags
         include:

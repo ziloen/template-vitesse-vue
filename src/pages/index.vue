@@ -28,7 +28,7 @@ const testMsg = t('useI18nTest', {
 })
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped></style>
 
 <!-- json / json5 / yaml -->
 <route lang="json">
