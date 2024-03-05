@@ -5,7 +5,6 @@ import Vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import { Features } from 'lightningcss'
 import path from 'node:path'
-import PostcssPresetEnv from 'postcss-preset-env'
 import Unocss from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import SvgComponent from 'unplugin-svg-component/vite'
@@ -231,9 +230,7 @@ export default defineConfig(({ command, mode }) => {
 
     css: {
       devSourcemap: true,
-
       transformer: 'lightningcss',
-
       lightningcss: {
         // https://lightningcss.dev/transpilation.html#feature-flags
         include:

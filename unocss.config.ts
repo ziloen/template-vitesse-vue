@@ -6,7 +6,6 @@ import {
   transformerDirectives,
   transformerVariantGroup,
 } from 'unocss'
-import presetTheme from 'unocss-preset-theme'
 import { presetZiloen } from 'unocss-preset-ziloen'
 import type { Theme } from 'unocss/preset-uno'
 
@@ -57,20 +56,6 @@ export default defineConfig<Theme>({
         mono: 'Fira Code'
       }
     }),
-    presetTheme<Theme>({
-      theme: {
-        light: {
-          colors: {
-            primary: '#3b82f6',
-          }
-        },
-        dark: {
-          colors: {
-            primary: '#90cdf4',
-          }
-        }
-      }
-    })
   ],
   transformers: [
     /* support @apply */
