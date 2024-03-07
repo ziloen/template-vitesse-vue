@@ -8,5 +8,5 @@
 
 
 <script setup lang="ts">
-import { NMessageProvider, NConfigProvider, darkTheme } from 'naive-ui'
+import { NConfigProvider, NMessageProvider, darkTheme } from 'naive-ui'
 </script>
