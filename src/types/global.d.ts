@@ -9,18 +9,8 @@ declare const IS_BUILD: boolean
 declare var __VUE__: boolean | undefined
 
 
-interface PromiseConstructor {
-  // TODO: remove when lib.d.ts is updated
-  // https://github.com/microsoft/TypeScript/issues/56483
-  withResolvers<T = unknown>(): {
-    promise: Promise<T>
-    resolve: (value: T) => void
-    reject: (reason?: unknown) => void
-  }
-}
-
-
 // Set methods types
+// TODO: https://github.com/microsoft/TypeScript/issues/57228
 // https://github.com/tc39/proposal-set-methods
 // https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Set#set_composition
 interface Set<T> {
