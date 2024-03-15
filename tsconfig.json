@@ -78,6 +78,7 @@
     "types": [
       "vite/client",
       "unplugin-vue-macros/macros-global",
+      "unplugin-vue-router/client",
       "ts-lib-enhance",
       "ts-lib-enhance/highlight",
       "ts-lib-enhance/view-transition",

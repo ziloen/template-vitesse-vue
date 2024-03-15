@@ -138,7 +138,7 @@ export default defineConfig(({ command, mode }) => {
       // https://github.com/Jevon617/unplugin-svg-component
       SvgComponent({
         iconDir: path.resolve('src/assets/svg-icons'),
-        dts: true,
+        dts: false,
         dtsDir: path.resolve('src/types'),
         componentStyle: 'width: 1em; height: 1em;',
         vueVersion: 3,
@@ -234,9 +234,9 @@ export default defineConfig(({ command, mode }) => {
       lightningcss: {
         // https://lightningcss.dev/transpilation.html#feature-flags
         include:
-          Features.OklabColors |
+          Features.Colors |
           Features.Nesting |
-          Features.MediaRangeSyntax
+          Features.MediaQueries
       },
     },
 

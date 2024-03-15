@@ -5,6 +5,10 @@
 
 :root {
   color-scheme: dark light;
+
+  /* https://lightningcss.dev/transpilation.html#light-dark()-color-function */
+  --theme-light: ;
+  --theme-dark: initial;
 }
 
 html,
@@ -26,10 +30,16 @@ html {
 
 html.dark {
   color-scheme: dark;
+
+  --theme-light: ;
+  --theme-dark: initial;
 }
 
 html.light {
   color-scheme: light;
+
+  --theme-light: initial;
+  --theme-dark: ;
 }
 
 #app {
