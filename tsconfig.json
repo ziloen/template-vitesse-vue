@@ -106,7 +106,6 @@
     // strict type check for Component tag and Props types (BUG，not working with svg, off)
     "strictTemplates": true,
     "jsxSlots": true,
-    // "jsxTemplates": false,
     // "skipTemplateCodegen": false,
     // link class for style block without scoped
     "experimentalResolveStyleCssClasses": "always",
