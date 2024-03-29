@@ -7,7 +7,6 @@ import { Features } from 'lightningcss'
 import path from 'node:path'
 import Unocss from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
-import SvgComponent from 'unplugin-svg-component/vite'
 import Components from 'unplugin-vue-components/vite'
 import VueMacros from 'unplugin-vue-macros/vite'
 import VueRoute from 'unplugin-vue-router/vite'
@@ -136,14 +135,7 @@ export default defineConfig(({ command, mode }) => {
       }),
 
       // https://github.com/Jevon617/unplugin-svg-component
-      SvgComponent({
-        iconDir: path.resolve('src/assets/svg-icons'),
-        dts: false,
-        dtsDir: path.resolve('src/types'),
-        componentStyle: 'width: 1em; height: 1em;',
-        vueVersion: 3,
-        projectType: 'vue',
-      }),
+      // SVG Component had some issues
 
       // https://github.com/antfu/unocss
       // https://unocss.dev/integrations/vite

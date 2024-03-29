@@ -9,7 +9,6 @@ import { createPinia } from 'pinia'
 import { createApp } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'
 import { routes } from 'vue-router/auto-routes'
-import SvgIcon from '~virtual/svg-component'
 import App from './App.vue'
 
 const router = createRouter({
@@ -32,5 +31,4 @@ createApp(App)
   .use(I18NextVue, { i18next })
   .use(createPinia())
   .use(createHead())
-  .component(SvgIcon.name!, SvgIcon)
   .mount('#app')

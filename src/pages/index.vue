@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col items-center">
-    <SvgIcon name="favicon" class="text-50px text-blue" />
+    <!-- <SvgIcon name="favicon" class="text-50px text-blue" /> -->
 
     <Counter :initial="0" />
 

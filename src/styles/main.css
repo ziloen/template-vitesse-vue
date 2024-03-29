@@ -3,6 +3,10 @@
   touch-action: manipulation;
 }
 
+button {
+  user-select: none;
+}
+
 :root {
   color-scheme: dark light;
 
@@ -25,7 +29,6 @@ body {
 html {
   background: light-dark(#fff, #121212);
   color: light-dark(#000, #fff);
-  /* color: theme("colors.test") */
 }
 
 html.dark {
@@ -44,6 +47,8 @@ html.light {
 
 #app {
   height: 100%;
+  contain: paint;
+  overflow: clip;
 }
 
 /* @font-face {
