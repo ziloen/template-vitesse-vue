@@ -13,10 +13,9 @@
  * isHTMLElement(event.target) && event.target.focus()
  * isHTMLElement(event.target, {constructorName: 'HTMLInputElement'}) && event.target.value // some value
  * ```
- *
  */
 export function isHTMLElement<ConstructorName extends HTMLElementConstructorName = never>(
-  element?: unknown,
+  element?: Node | null | undefined,
   options?: {
     /**
      * Can be used to provide a custom constructor instead of `HTMLElement`,
@@ -25,7 +24,7 @@ export function isHTMLElement<ConstructorName extends HTMLElementConstructorName
     constructorName?: ConstructorName
   }
 ): element is InstanceType<(typeof globalThis)[[ConstructorName] extends [never] ? 'HTMLElement' : ConstructorName]> {
-  const typedElement = element as Node | null | undefined
+  const typedElement = element
   return Boolean(
     typedElement?.ownerDocument?.defaultView &&
     typedElement instanceof
