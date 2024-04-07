@@ -1,0 +1,93 @@
+:root {
+  /* https://mozilla.design/firefox/#color */
+  /* https://acorn.firefox.com/latest */
+  /* https://protocol.mozilla.org/docs/fundamentals/color */
+
+  --green-0: #e3fff3;
+  --green-1: #D0FFED;
+  --green-2: #B3FFE3;
+  --green-3: #88FFD1;
+  --green-4: #53FEBE;
+  --green-5: #3fe1b0;
+  --green-6: #2BC4A2;
+  --green-7: #068989;
+  --green-8: #005E5D;
+  --green-9: #083F37;
+
+  --blue-0: #ACF1FF;
+  --blue-1: #80EAFF;
+  --blue-2: #00DDFF;
+  --blue-3: #00B3F5;
+  --blue-4: #0290EE;
+  --blue-5: #0060E0;
+  --blue-6: #0250BC;
+  --blue-7: #063F96;
+  --blue-8: #073072;
+  --blue-9: #0A214D;
+
+  --violet-0: #E6DFFF;
+  --violet-1: #D9BFFF;
+  --violet-2: #CC9EFF;
+  --violet-3: #C588FF;
+  --violet-4: #AC71FF;
+  --violet-5: #9059FF;
+  --violet-6: #7543E3;
+  --violet-7: #582ACB;
+  --violet-8: #46278E;
+  --violet-9: #321C64;
+
+  --purple-0: #f7e3ff;
+  --purple-1: #F6B9FF;
+  --purple-2: #F690FF;
+  --purple-3: #F564FF;
+  --purple-4: #D64CF1;
+  --purple-5: #B933E1;
+  --purple-6: #962BB9;
+  --purple-7: #712290;
+  --purple-8: #4D1A69;
+  --purple-9: #2B1141;
+
+  --pink-0: #FFDFF0;
+  --pink-1: #FFB4DB;
+  --pink-2: #FF8AC6;
+  --pink-3: #FF6BBB;
+  --pink-4: #FE4AA3;
+  --pink-5: #FF2A8A;
+  --pink-6: #E11586;
+  --pink-7: #C60184;
+  --pink-8: #7F165B;
+  --pink-9: #50134C;
+
+  --red-0: #FFE0E8;
+  --red-1: #FFBEC6;
+  --red-2: #FF9AA2;
+  --red-3: #FF848C;
+  --red-4: #FF6A75;
+  --red-5: #FF505F;
+  --red-6: #E02950;
+  --red-7: #C50143;
+  --red-8: #800220;
+  --red-9: #440307;
+
+  --orange-0: #FFF4DE;
+  --orange-1: #FFD6B2;
+  --orange-2: #FFB588;
+  --orange-3: #FEA365;
+  --orange-4: #FE8A4F;
+  --orange-5: #FF7139;
+  --orange-6: #E25821;
+  --orange-7: #CD3D00;
+  --orange-8: #9D280C;
+  --orange-9: #7B1604;
+
+  --yellow-0: #FFFFCD;
+  --yellow-1: #FEFF95;
+  --yellow-2: #FFEA7F;
+  --yellow-3: #FFD567;
+  --yellow-4: #FFBD4F;
+  --yellow-5: #FFA537;
+  --yellow-6: #E17F2E;
+  --yellow-7: #C45A28;
+  --yellow-8: #A7341F;
+  --yellow-9: #960F18;
+}

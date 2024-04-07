@@ -33,22 +33,6 @@
   "i18n-ally.sortKeys": true,
   "i18n-ally.sourceLanguage": "en",
   "prettier.enable": false,
-  // if you use mrmlnc.vscode-scss extension
-  "scss.scannerExclude": [
-    "**/.git",
-    "**/node_modules",
-    "**/bower_components",
-    "**/dist",
-    // FIXME: this is ugly, but it works
-    // exclude all files in src folder except `src/styles/variables/index.module.scss`
-    "/!(src)",
-    "/!(src)/**/*",
-    "/src/!(styles)",
-    "/src/!(styles)/**/*",
-    "/src/styles/!(variables)",
-    "/src/styles/!(variables)/**/*",
-    "/src/styles/variables/!(index.module.scss)"
-  ],
   // https://github.com/mrmckeb/typescript-plugin-css-modules?tab=readme-ov-file#visual-studio-code
   // ts css module plugin support
   "typescript.tsdk": "node_modules/typescript/lib",
