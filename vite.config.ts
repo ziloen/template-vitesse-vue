@@ -228,7 +228,10 @@ export default defineConfig(({ command, mode }) => {
         include:
           Features.Colors |
           Features.Nesting |
-          Features.MediaQueries
+          Features.MediaQueries,
+
+        exclude:
+          Features.LogicalProperties
       },
     },
 
