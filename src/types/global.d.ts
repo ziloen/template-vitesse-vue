@@ -62,3 +62,8 @@ interface ArrayConstructor {
     thisArg?: any,
   ): Promise<Awaited<U>[]>
 }
+
+interface ShadowRoot {
+  // https://caniuse.com/mdn-api_shadowroot_getselection
+  getSelection?: () => (Selection | null)
+}
