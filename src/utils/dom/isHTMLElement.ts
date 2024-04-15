@@ -15,7 +15,7 @@
  * ```
  */
 export function isHTMLElement<ConstructorName extends HTMLElementConstructorName = never>(
-  element?: Node | null | undefined,
+  element?: unknown,
   options?: {
     /**
      * Can be used to provide a custom constructor instead of `HTMLElement`,
@@ -24,7 +24,7 @@ export function isHTMLElement<ConstructorName extends HTMLElementConstructorName
     constructorName?: ConstructorName
   }
 ): element is InstanceType<(typeof globalThis)[[ConstructorName] extends [never] ? 'HTMLElement' : ConstructorName]> {
-  const typedElement = element
+  const typedElement = element as Node | null | undefined
   return Boolean(
     typedElement?.ownerDocument?.defaultView &&
     typedElement instanceof

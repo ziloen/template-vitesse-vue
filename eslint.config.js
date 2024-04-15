@@ -1,9 +1,8 @@
-import { format, vue } from '@ziloen/eslint-config'
+import { vue } from '@ziloen/eslint-config'
 
 /** @type { import("@ziloen/eslint-config").FlatESLintConfig[] } */
 export default [
-  ...vue({ tsconfigPath: "./tsconfig.json" }),
-  ...format({ tsconfigPath: "./tsconfig.json" }),
+  ...vue({ tsconfigPath: './tsconfig.json' }),
   {
     ignores: [
       'volar.config.js',

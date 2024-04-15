@@ -16,7 +16,7 @@
     "@wai-ri/core": "^0.0.101",
     "@wai-ri/vue": "^0.0.101",
     "axios": "^1.6.8",
-    "i18next": "^23.11.1",
+    "i18next": "^23.11.2",
     "i18next-vue": "^4.0.0",
     "magic-regexp": "^0.8.0",
     "motion": "^10.17.0",
@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "@iconify-json/carbon": "^1.1.31",
-    "@unocss/reset": "^0.59.1",
+    "@unocss/reset": "^0.59.2",
     "@vitejs/plugin-legacy": "5.3.2",
     "@vitejs/plugin-vue": "5.0.4",
     "@vitejs/plugin-vue-jsx": "^3.1.0",
@@ -43,16 +43,16 @@
     "type-fest": "^4.15.0",
     "typescript": "^5.4.5",
     "typescript-plugin-css-modules": "^5.1.0",
-    "unocss": "^0.59.1",
+    "unocss": "^0.59.2",
     "unocss-preset-ziloen": "^0.0.5",
     "unplugin-auto-import": "^0.17.5",
     "unplugin-svg-component": "0.8.0",
     "unplugin-vue-components": "^0.26.0",
     "unplugin-vue-macros": "^2.9.1",
-    "unplugin-vue-router": "^0.8.5",
+    "unplugin-vue-router": "^0.8.6",
     "vite": "5.2.8",
     "vitest": "^1.5.0",
     "volar-service-prettyhtml": "^0.0.34",
-    "vue-tsc": "^2.0.12"
+    "vue-tsc": "^2.0.13"
   }
 }
