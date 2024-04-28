@@ -225,11 +225,13 @@ export default defineConfig(({ command, mode }) => {
       transformer: 'lightningcss',
       lightningcss: {
         // https://lightningcss.dev/transpilation.html#feature-flags
+        // Always transpile
         include:
           Features.Colors |
           Features.Nesting |
-          Features.MediaQueries,
+          Features.MediaRangeSyntax,
 
+        // Never transpile
         exclude:
           Features.LogicalProperties
       },
