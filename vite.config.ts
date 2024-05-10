@@ -205,7 +205,7 @@ export default defineConfig(({ command, mode }) => {
           /** TypedArray.prototype.at() */
           'es.typed-array.at',
         ],
-        modernTargets: 'chrome>=93, edge>=93, firefox>=91, safari>=15, chromeAndroid>=93, iOS>=15'
+        modernTargets: 'chrome>=93, edge>=93, firefox>=91, safari>=15.4, chromeAndroid>=93, iOS>=15'
       })
     ],
 
