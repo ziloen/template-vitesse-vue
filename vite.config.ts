@@ -68,6 +68,11 @@ export default defineConfig(({ command, mode }) => {
             script: {
               defineModel: true,
               propsDestructure: true
+            },
+            template: {
+              compilerOptions: {
+                // hoistStatic: true,
+              }
             }
           }),
           // https://github.com/vitejs/vite-plugin-vue/blob/main/packages/plugin-vue-jsx
@@ -75,7 +80,7 @@ export default defineConfig(({ command, mode }) => {
             optimize: true,
             transformOn: true
           }),
-        }
+        },
       }),
 
       // https://github.com/antfu/unplugin-auto-import
@@ -136,6 +141,12 @@ export default defineConfig(({ command, mode }) => {
 
       // https://github.com/Jevon617/unplugin-svg-component
       // SVG Component had some issues
+      // UnpluginSvgComponent({ 
+      //   iconDir: "./src/assets/svg-icons",
+      //   dts: true,
+      //   dtsDir: "./src/types/"
+      // }),
+
 
       // https://github.com/antfu/unocss
       // https://unocss.dev/integrations/vite
