@@ -1,5 +1,3 @@
-/* eslint-disable no-console */
-
 import { useI18n } from '~/composables'
 
 type Props = {

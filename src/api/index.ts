@@ -20,7 +20,6 @@ request.interceptors.response.use(
   (error: Error) => {
 
     // const message = useMessage()
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-member-access
     message.error(error.message || 'Request Error')
     throw error
   }
@@ -29,6 +28,4 @@ request.interceptors.response.use(
 export { request }
 
 
-export type PageParams = {
-  // 
-}
+export type PageParams = Record<string, unknown>
