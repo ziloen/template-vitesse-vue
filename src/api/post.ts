@@ -12,7 +12,7 @@ export type Post = {
  * 获取全部 Post
  * @returns
  */
-export async function getPostList() {
+export async function getPostListAPI() {
   return request.get<Post[]>('/posts')
 }
 
