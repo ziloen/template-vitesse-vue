@@ -126,7 +126,6 @@ export default defineConfig(({ command, mode }) => {
               'unrefElement',
               'useVModel'
             ],
-            ulid: ['ulid']
           }
         ],
         dts: './src/types/auto-imports.d.ts',

@@ -67,7 +67,6 @@ declare module 'vue' {
     readonly shallowReadonly: UnwrapRef<typeof import('vue')['shallowReadonly']>
     readonly shallowRef: UnwrapRef<typeof import('vue')['shallowRef']>
     readonly toRaw: UnwrapRef<typeof import('vue')['toRaw']>
-    readonly ulid: UnwrapRef<typeof import('ulid')['ulid']>
     readonly unref: UnwrapRef<typeof import('vue')['unref']>
     readonly unrefElement: UnwrapRef<typeof import('@vueuse/core')['unrefElement']>
     readonly useCssModule: UnwrapRef<typeof import('vue')['useCssModule']>
@@ -106,7 +105,6 @@ declare module '@vue/runtime-core' {
     readonly shallowReadonly: UnwrapRef<typeof import('vue')['shallowReadonly']>
     readonly shallowRef: UnwrapRef<typeof import('vue')['shallowRef']>
     readonly toRaw: UnwrapRef<typeof import('vue')['toRaw']>
-    readonly ulid: UnwrapRef<typeof import('ulid')['ulid']>
     readonly unref: UnwrapRef<typeof import('vue')['unref']>
     readonly unrefElement: UnwrapRef<typeof import('@vueuse/core')['unrefElement']>
     readonly useCssModule: UnwrapRef<typeof import('vue')['useCssModule']>
