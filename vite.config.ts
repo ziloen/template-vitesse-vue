@@ -83,7 +83,7 @@ export default defineConfig(({ command, mode }) => {
         },
       }),
 
-      // https://github.com/antfu/unplugin-auto-import
+      // https://github.com/unplugin/unplugin-auto-import
       AutoImport({
         imports: [
           {
@@ -134,7 +134,7 @@ export default defineConfig(({ command, mode }) => {
         vueTemplate: true
       }) as Plugin,
 
-      // https://github.com/antfu/vite-plugin-components
+      // https://github.com/unplugin/unplugin-vue-components
       Components({
         dts: './src/types/components.d.ts',
       }),
@@ -148,7 +148,7 @@ export default defineConfig(({ command, mode }) => {
       // }),
 
 
-      // https://github.com/antfu/unocss
+      // https://github.com/unocss/unocss
       // https://unocss.dev/integrations/vite
       Unocss({
         mode: 'global'
