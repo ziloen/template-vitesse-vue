@@ -11,19 +11,22 @@ import Components from 'unplugin-vue-components/vite'
 import VueMacros from 'unplugin-vue-macros/vite'
 import VueRoute from 'unplugin-vue-router/vite'
 import type { Plugin } from 'vite'
-import { defineConfig } from 'vite'
+import { defineConfig, loadEnv } from 'vite'
 
 
 export default defineConfig(({ command, mode }) => {
-  const IS_PROD = process.env['NODE_ENV'] === 'production'
-  const IS_DEV = process.env['NODE_ENV'] === 'development'
+  const cwd = process.cwd()
+  const env = loadEnv(mode, cwd)
+
+  const IS_PROD = env["PROD"]
+  const IS_DEV = env["DEV"]
   const IS_BUILD = command === 'build'
 
   return {
     resolve: {
       alias: {
         '~': path.resolve('src'),
-        '~cwd': process.cwd(),
+        '~cwd': cwd,
       }
     },
 

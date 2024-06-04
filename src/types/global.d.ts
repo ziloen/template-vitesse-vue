@@ -1,7 +1,17 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 /* eslint-disable no-var */
 // @ts-nocheck
+/**
+ * @deprecated
+ * use `import.meta.env.PROD` instead
+ * [Env Variables](https://vitejs.dev/guide/env-and-mode.html#env-variables)
+ */
 declare const IS_PROD: boolean
+/**
+ * @deprecated
+ * use `import.meta.env.DEV` instead
+ * [Env Variables](https://vitejs.dev/guide/env-and-mode.html#env-variables)
+ */
 declare const IS_DEV: boolean
 declare const IS_BUILD: boolean
 // if you want variable available on globalThis / Window, use `var` instead of `const` or `let`
