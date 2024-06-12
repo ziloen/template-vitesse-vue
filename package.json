@@ -52,7 +52,6 @@
     "unplugin-vue-router": "0.9.1",
     "vite": "5.2.13",
     "vitest": "1.6.0",
-    "volar-service-prettyhtml": "0.0.51",
     "vue-tsc": "2.0.21"
   }
 }
