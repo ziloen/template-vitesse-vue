@@ -15,7 +15,7 @@ export default defineConfig<Theme>({
   theme: {
     colors: {
       test: 'light-dark(blue, green)'
-    }
+    },
   },
   rules: [
     // grid-col-[start]/[end]
@@ -43,6 +43,7 @@ export default defineConfig<Theme>({
   presets: [
     presetUno({
       arbitraryVariants: false,
+      dark: "class"
     }),
     presetZiloen(),
     presetIcons({
