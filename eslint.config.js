@@ -6,6 +6,7 @@ export default [
   {
     ignores: [
       'volar.config.js',
+      "src/pages/jsx/sfc.vue"
     ]
   }
 ]
