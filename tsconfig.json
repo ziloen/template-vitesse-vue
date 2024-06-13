@@ -83,6 +83,11 @@
       "ts-lib-enhance/highlight",
       "ts-lib-enhance/view-transition",
     ],
+    "typeRoots": [
+      "./node_modules/@types/",
+      "./node_modules",
+      "./src/types",
+    ],
     "paths": {
       "~/*": [
         "src/*"
@@ -119,11 +124,10 @@
   ],
   "include": [
     "src",
-    "test",
-    // config files
-    "eslint.config.js",
-    "unocss.config.ts",
-    "vite.config.ts",
-    "volar.config.js",
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
   ]
 }

@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "skipLibCheck": true,
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "strictNullChecks": true,
+    "allowJs": true,
+    // "noEmit": true,
+    "emitDeclarationOnly": true,
+    "allowSyntheticDefaultImports": true,
+    "types": [
+      "node"
+    ]
+  },
+  "include": [
+    "test",
+    // config files
+    "eslint.config.js",
+    "unocss.config.ts",
+    "vite.config.ts",
+    "volar.config.js",
+  ]
+}
