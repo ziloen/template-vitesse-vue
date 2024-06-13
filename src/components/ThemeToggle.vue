@@ -1,6 +1,6 @@
 <template>
-  <button icon-btn @click="toggleDark()">
-    <div dark:i-carbon-moon i-carbon-sun />
+  <button class="icon-btn" @click="toggleDark()">
+    <div class="i-carbon-sun dark:i-carbon-moon" />
   </button>
 </template>
 
