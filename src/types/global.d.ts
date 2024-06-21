@@ -21,61 +21,33 @@ declare const IS_BUILD: boolean
 declare var __VUE__: boolean | undefined
 
 
-// Set methods types
-// TODO: https://github.com/microsoft/TypeScript/issues/57228
-// https://github.com/tc39/proposal-set-methods
-// https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Set#set_composition
-interface Set<T> {
-  /**
-   * [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Set/difference)
-   */
-  difference<K>(other: Set<K>): Set<T>
-  /**
-   * [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Set/intersection)
-   */
-  intersection<K>(other: Set<K>): Set<T>
-  /**
-   * [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Set/isDisjointFrom)
-   */
-  isDisjointFrom<K>(other: Set<K>): boolean
-  /**
-   * [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Set/isSubsetOf)
-   */
-  isSubsetOf<K>(other: Set<K>): boolean
-  /**
-   * [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Set/isSupersetOf)
-   */
-  isSupersetOf<K>(other: Set<K>): boolean
-  /**
-   * [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Set/symmetricDifference)
-   */
-  symmetricDifference<K>(other: Set<K>): Set<T>
-  /**
-   * [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Set/union)
-   */
-  union<K>(other: Set<K>): Set<T>
-}
-
-
-interface ArrayConstructor {
-  // TODO: remove when lib.d.ts is updated
-  // https://github.com/microsoft/TypeScript/issues/50803
-  /**
-   * Creates an array from an array-like or iterable object.
-   * 
-   * [MDN Reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/fromAsync)
-   */
-  fromAsync<T>(
-    iterableOrArrayLike: AsyncIterable<T> | Iterable<T | Promise<T>> | ArrayLike<T | Promise<T>>,
-  ): Promise<T[]>
-  fromAsync<T, U>(
-    iterableOrArrayLike: AsyncIterable<T> | Iterable<T> | ArrayLike<T>,
-    mapFn: (value: Awaited<T>) => U,
-    thisArg?: any,
-  ): Promise<Awaited<U>[]>
-}
 
 interface ShadowRoot {
-  // https://caniuse.com/mdn-api_shadowroot_getselection
+  /** [Can I use](https://caniuse.com/mdn-api_shadowroot_getselection) */
   getSelection?: () => (Selection | null)
+}
+
+
+
+interface NavigatorUABrandVersion {
+  brand: string
+  version: string
+}
+
+interface NavigatorUAData {
+  brands: ReadonlyArray<NavigatorUABrandVersion>
+  mobile: boolean
+  platform: string
+
+  // toJSON(): unknown
+  // getHighEntropyValues(hints: string[]): Promise<unknown>
+}
+
+interface NavigatorID {
+  /**
+   * [MDN Reference](https://developer.mozilla.org/docs/Web/API/Navigator/userAgentData)
+   * 
+   * [Can I Use](https://caniuse.com/mdn-api_navigator_useragentdata)
+   */
+  userAgentData?: NavigatorUAData
 }
