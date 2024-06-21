@@ -9,7 +9,7 @@
     "typecheck": "vue-tsc --noEmit"
   },
   "dependencies": {
-    "@unhead/vue": "1.9.13",
+    "@unhead/vue": "1.9.14",
     "@vueuse/core": "10.11.0",
     "@vueuse/motion": "2.2.3",
     "@vueuse/rxjs": "10.11.0",
@@ -24,24 +24,24 @@
     "naive-ui": "2.38.2",
     "pinia": "2.1.7",
     "rxjs": "7.8.1",
-    "vue": "3.4.27",
+    "vue": "3.4.29",
     "vue-router": "4.3.3"
   },
   "devDependencies": {
-    "@iconify-json/carbon": "1.1.35",
+    "@iconify-json/carbon": "1.1.36",
     "@unocss/reset": "0.61.0",
     "@vitejs/plugin-legacy": "5.4.1",
     "@vitejs/plugin-vue": "5.0.5",
     "@vitejs/plugin-vue-jsx": "4.0.0",
     "@vue/test-utils": "2.4.6",
-    "@ziloen/eslint-config": "0.1.35",
+    "@ziloen/eslint-config": "0.1.36",
     "cross-env": "7.0.3",
-    "eslint": "9.4.0",
+    "eslint": "9.5.0",
     "jsdom": "24.1.0",
     "lightningcss": "1.25.1",
     "ts-lib-enhance": "1.0.17",
-    "type-fest": "4.20.0",
-    "typescript": "5.4.5",
+    "type-fest": "4.20.1",
+    "typescript": "5.5.2",
     "typescript-plugin-css-modules": "5.1.0",
     "unocss": "0.61.0",
     "unocss-preset-ziloen": "0.0.5",
@@ -50,7 +50,7 @@
     "unplugin-vue-components": "0.27.0",
     "unplugin-vue-macros": "2.9.5",
     "unplugin-vue-router": "0.9.1",
-    "vite": "5.2.13",
+    "vite": "5.3.1",
     "vitest": "1.6.0",
     "vue-tsc": "2.0.21"
   }
