@@ -1,4 +1,5 @@
 import axios from 'axios'
+import type { ZodTypeAny } from 'zod'
 import { message } from '~/utils'
 
 
@@ -10,12 +11,26 @@ const request = axios.create({
 })
 
 
+function validate(data: unknown, schema: ZodTypeAny | undefined) {
+  if (!schema) return
+  const result = schema.safeParse(data)
+  if (!result.success) {
+    globalThis.console.error(result.error)
+  }
+}
+
+request.interceptors.request.use(config => {
+  message.loading('Requesting...')
+  validate(config.data, config.requestZod)
+  return config
+})
+
 
 request.interceptors.response.use(
   value => {
     message.success('Request Success')
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-return
-    return value.data
+    validate(value.data, value.config.responseZod)
+    return value
   },
   (error: Error) => {
 
@@ -24,6 +39,8 @@ request.interceptors.response.use(
     throw error
   }
 )
+
+
 
 export { request }
 
