@@ -70,12 +70,16 @@ export default defineConfig(({ command, mode }) => {
           vue: Vue({
             script: {
               defineModel: true,
-              propsDestructure: true
             },
             template: {
               compilerOptions: {
                 // hoistStatic: true,
               }
+            },
+            features: {
+              propsDestructure: true,
+              optionsAPI: false,
+              prodDevtools: false,
             }
           }),
           // https://github.com/vitejs/vite-plugin-vue/blob/main/packages/plugin-vue-jsx
@@ -183,6 +187,8 @@ export default defineConfig(({ command, mode }) => {
           'web.structured-clone',
           /** URL.canParse() */
           'web.url.can-parse',
+          /** URL.parse() */
+          'web.url.parse',
 
           // ES2023
           /** Array.prototype.findLast() */
