@@ -254,6 +254,9 @@ export default defineConfig(({ command, mode }) => {
         exclude:
           Features.LogicalProperties
       },
+      modules: {
+        generateScopedName: "[hash:base64:8]"
+      }
     },
 
     // https://vitejs.dev/config/dep-optimization-options.html
