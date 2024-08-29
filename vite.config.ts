@@ -252,7 +252,12 @@ export default defineConfig(({ command, mode }) => {
 
         // Never transpile
         exclude:
-          Features.LogicalProperties
+          Features.LogicalProperties,
+
+        cssModules: {
+          pattern: "[hash]",
+          dashedIdents: false,
+        }
       },
       modules: {
         generateScopedName: "[hash:base64:8]"
