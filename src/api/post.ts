@@ -1,5 +1,4 @@
 import z from "zod"
-import type { PageParams } from '~/api'
 import { request } from '~/api'
 
 const post = z.object({

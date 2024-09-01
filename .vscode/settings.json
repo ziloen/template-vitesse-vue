@@ -1,4 +1,10 @@
 {
+  "[json]": {
+    "editor.codeActionsOnSave": [
+      "source.sort.json"
+    ],
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
   "[typescript]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
@@ -19,7 +25,6 @@
   "emmet.extensionsPath": [
     ".vscode/emmet"
   ],
-  "eslint.experimental.useFlatConfig": true,
   "eslint.format.enable": true,
   "eslint.validate": [
     "javascript",
@@ -37,6 +42,9 @@
   "typescript.preferences.autoImportFileExcludePatterns": [
     "node:console",
     "console"
+  ],
+  "typescript.preferences.autoImportSpecifierExcludeRegexes": [
+    "^node:console$"
   ],
   "typescript.preferences.preferTypeOnlyAutoImports": true,
   // https://github.com/mrmckeb/typescript-plugin-css-modules?tab=readme-ov-file#visual-studio-code
