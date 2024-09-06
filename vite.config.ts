@@ -120,10 +120,11 @@ export default defineConfig(({ command, mode }) => {
               'unref',
               'useCssModule',
               'useCssVars',
+              'useId',
               'watch',
               'watchEffect',
               'watchPostEffect',
-              'watchSyncEffect'
+              'watchSyncEffect',
             ],
             'vue-router': [
               'useRoute',
