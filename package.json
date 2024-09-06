@@ -9,9 +9,9 @@
     "typecheck": "vue-tsc --noEmit"
   },
   "dependencies": {
-    "@unhead/vue": "1.10.0",
+    "@unhead/vue": "1.10.4",
     "@vueuse/core": "11.0.3",
-    "@vueuse/motion": "2.2.3",
+    "@vueuse/motion": "2.2.4",
     "@vueuse/rxjs": "11.0.3",
     "@wai-ri/core": "0.0.101",
     "@wai-ri/vue": "0.0.101",
@@ -24,7 +24,7 @@
     "naive-ui": "2.39.0",
     "pinia": "2.2.2",
     "rxjs": "7.8.1",
-    "vue": "3.4.38",
+    "vue": "3.5.3",
     "vue-router": "4.4.3",
     "zod": "3.23.8"
   },
@@ -49,10 +49,10 @@
     "unplugin-auto-import": "0.18.2",
     "unplugin-svg-component": "0.10.3",
     "unplugin-vue-components": "0.27.4",
-    "unplugin-vue-macros": "2.11.6",
+    "unplugin-vue-macros": "2.11.7",
     "unplugin-vue-router": "0.10.7",
-    "vite": "5.4.2",
+    "vite": "5.4.3",
     "vitest": "2.0.5",
-    "vue-tsc": "2.1.4"
+    "vue-tsc": "2.1.6"
   }
 }
