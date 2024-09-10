@@ -1,7 +1,7 @@
 {
   "[json]": {
     "editor.codeActionsOnSave": [
-      "source.sort.json"
+      "source.sort.json",
     ],
     "editor.defaultFormatter": "vscode.json-language-features"
   },
@@ -10,7 +10,7 @@
   },
   // add @apply & @container to css atDirectives
   "css.customData": [
-    ".vscode/css-data.json"
+    ".vscode/css-data.json",
   ],
   "editor.codeActionsOnSave": [
     // only sort imports
@@ -23,7 +23,7 @@
   // "editor.snippetSuggestions": "top",
   // add @container & @media snippet
   "emmet.extensionsPath": [
-    ".vscode/emmet"
+    ".vscode/emmet",
   ],
   "eslint.format.enable": true,
   "eslint.validate": [
@@ -31,20 +31,19 @@
     "javascriptreact",
     "typescript",
     "typescriptreact",
-    "vue"
+    "vue",
   ],
   "i18n-ally.keystyle": "nested",
   "i18n-ally.localesPaths": "src/locales",
   "i18n-ally.sortKeys": true,
   "i18n-ally.sourceLanguage": "en",
-  "prettier.enable": false,
-  // Exclude auto import from 
-  "typescript.preferences.autoImportFileExcludePatterns": [
-    "node:console",
-    "console"
+  "javascript.preferences.autoImportSpecifierExcludeRegexes": [
+    "^node:console$",
   ],
+  "prettier.enable": false,
+  // https://devblogs.microsoft.com/typescript/announcing-typescript-5-6/#exclude-patterns-for-auto-imports10 
   "typescript.preferences.autoImportSpecifierExcludeRegexes": [
-    "^node:console$"
+    "^node:console$",
   ],
   "typescript.preferences.preferTypeOnlyAutoImports": true,
   // https://github.com/mrmckeb/typescript-plugin-css-modules?tab=readme-ov-file#visual-studio-code
