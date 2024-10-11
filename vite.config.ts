@@ -171,7 +171,7 @@ export default defineConfig(({ command, mode }) => {
         polyfills: false,
         /** polyfills for modern browsers (supports esm) */
         modernPolyfills: [
-          // proposals
+          // Proposals
           /** Array.fromAsync() */
           'esnext.array.from-async',
           /** Promise.withResolvers() */
