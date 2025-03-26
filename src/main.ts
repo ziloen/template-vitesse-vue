@@ -2,7 +2,7 @@ import '@unocss/reset/tailwind.css'
 import 'uno.css'
 import './styles/main.css'
 
-import { createHead } from '@unhead/vue'
+import { createHead } from '@unhead/vue/client'
 import i18next from 'i18next'
 import I18NextVue from 'i18next-vue'
 import { createPinia } from 'pinia'
