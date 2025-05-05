@@ -1,6 +1,5 @@
-import '@unocss/reset/tailwind.css'
-import 'uno.css'
 import './styles/main.css'
+import "./styles/tailwind.css"
 
 import { createHead } from '@unhead/vue/client'
 import i18next from 'i18next'

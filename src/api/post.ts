@@ -19,7 +19,7 @@ export type Post = z.infer<typeof postSchema>
  */
 export async function getPostListAPI() {
   return (await request.get<Post[]>('/posts', { 
-    responseZod: postListSchema
+    responseSchema: postListSchema
   })).data
 }
 

@@ -1,16 +1,15 @@
 /// <reference types="vitest" />
 
+import tailwindcss from '@tailwindcss/vite'
 import legacy from '@vitejs/plugin-legacy'
 import Vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import { Features } from 'lightningcss'
 import path from 'node:path'
-import Unocss from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import VueMacros from 'unplugin-vue-macros/vite'
 import VueRoute from 'unplugin-vue-router/vite'
-import type { Plugin } from 'vite'
 import { defineConfig, loadEnv } from 'vite'
 
 
@@ -18,9 +17,11 @@ export default defineConfig(({ command, mode }) => {
   const cwd = process.cwd()
   const env = loadEnv(mode, cwd)
 
-  const IS_PROD = env["PROD"]
-  const IS_DEV = env["DEV"]
+  const IS_PROD = env.PROD
+  const IS_DEV = env.DEV
   const IS_BUILD = command === 'build'
+
+  const target = '> 0.5%, last 2 versions, Firefox ESR, not dead'
 
   return {
     resolve: {
@@ -139,94 +140,23 @@ export default defineConfig(({ command, mode }) => {
         dts: './src/types/auto-imports.d.ts',
         // dirs: ['./src/composables'],
         vueTemplate: true
-      }) as Plugin,
+      }),
 
       // https://github.com/unplugin/unplugin-vue-components
       Components({
         dts: './src/types/components.d.ts',
       }),
 
-      // https://github.com/Jevon617/unplugin-svg-component
-      // SVG Component had some issues
-      // UnpluginSvgComponent({ 
-      //   iconDir: "./src/assets/svg-icons",
-      //   dts: true,
-      //   dtsDir: "./src/types/"
-      // }),
-
-
-      // https://github.com/unocss/unocss
-      // https://unocss.dev/integrations/vite
-      Unocss({
-        mode: 'global'
-      }),
-
-      // TODO: polyfill for web apis like `:has` query selector
+      tailwindcss(),
 
       // https://github.com/vitejs/vite/tree/main/packages/plugin-legacy
       legacy({
         // render legacy chunks for non-modern browsers
         renderLegacyChunks: false,
-        /** polyfills for non-modern browsers (not supports esm) */
-        polyfills: false,
-        /** polyfills for modern browsers (supports esm) */
-        modernPolyfills: [
-          // Proposals
-          /** Array.fromAsync() */
-          'esnext.array.from-async',
-          /** Promise.withResolvers() */
-          'esnext.promise.with-resolvers',
-          /** https://github.com/tc39/proposal-set-methods */
-          'proposals/set-methods',
-          /** https://github.com/tc39/proposal-iterator-helpers */
-          'proposals/iterator-helpers',
-          /** https://github.com/tc39/proposal-async-iterator-helpers */
-          'proposals/async-iterator-helpers',
-
-          // Web APIs
-          /** structuredClone() */
-          'web.structured-clone',
-          /** URL.canParse() */
-          'web.url.can-parse',
-          /** URL.parse() */
-          'web.url.parse',
-
-          // ES2023
-          /** Array.prototype.findLast() */
-          'es.array.find-last',
-          /** Array.prototype.findLastIndex() */
-          'es.array.find-last-index',
-          /** TypedArray.prototype.findLast() */
-          'es.typed-array.find-last',
-          /** TypedArray.prototype.findLastIndex() */
-          'es.typed-array.find-last-index',
-          /** Array.prototype.toReversed() */
-          'esnext.array.to-reversed',
-          /** Array.prototype.toSorted() */
-          'esnext.array.to-sorted',
-          /** Array.prototype.toSpliced() */
-          'esnext.array.to-spliced',
-          /** Array.prototype.with() */
-          'esnext.array.with',
-
-          // ES2022
-          /** AggregateError */
-          'es.aggregate-error',
-          /** AggregateError: cause */
-          'es.aggregate-error.cause',
-          /** Array.prototype.at() */
-          'es.array.at',
-          /** Error: cause */
-          'es.error.cause',
-          /** Object.hasOwn */
-          'es.object.has-own',
-          /** String.prototype.at() */
-          'es.string.at-alternative',
-          /** TypedArray.prototype.at() */
-          'es.typed-array.at',
-        ],
-        modernTargets: 'chrome>=93, edge>=93, firefox>=91, safari>=15.4, chromeAndroid>=93, iOS>=15'
-      })
+        targets: target,
+        modernTargets: target,
+        modernPolyfills: true,
+      }),
     ],
 
     build: {

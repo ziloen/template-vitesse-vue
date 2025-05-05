@@ -21,7 +21,7 @@ function validate(data: unknown, schema: ZodTypeAny | undefined) {
 
 request.interceptors.request.use(config => {
   message.loading('Requesting...')
-  validate(config.data, config.requestZod)
+  validate(config.data, config.requestSchema)
   return config
 })
 
@@ -29,7 +29,7 @@ request.interceptors.request.use(config => {
 request.interceptors.response.use(
   value => {
     message.success('Request Success')
-    validate(value.data, value.config.responseZod)
+    validate(value.data, value.config.responseSchema)
     return value
   },
   (error: Error) => {

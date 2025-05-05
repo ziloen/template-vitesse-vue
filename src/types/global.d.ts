@@ -5,14 +5,14 @@
  * @deprecated
  * use `import.meta.env.PROD` instead
  * 
- * [Env Variables](https://vitejs.dev/guide/env-and-mode.html#env-variables)
+ * [Built-in constants](https://vite.dev/guide/env-and-mode.html#built-in-constants)
  */
 declare const IS_PROD: boolean
 /**
  * @deprecated
  * use `import.meta.env.DEV` instead
  * 
- * [Env Variables](https://vitejs.dev/guide/env-and-mode.html#env-variables)
+ * [Built-in constants](https://vite.dev/guide/env-and-mode.html#built-in-constants)
  */
 declare const IS_DEV: boolean
 declare const IS_BUILD: boolean
