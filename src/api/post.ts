@@ -1,4 +1,4 @@
-import z from "zod"
+import { z } from "zod"
 import { request } from '~/api'
 
 const postSchema = z.object({
@@ -18,7 +18,7 @@ export type Post = z.infer<typeof postSchema>
  * @returns
  */
 export async function getPostListAPI() {
-  return (await request.get<Post[]>('/posts', { 
+  return (await request.get<Post[]>('/posts', {
     responseSchema: postListSchema
   })).data
 }

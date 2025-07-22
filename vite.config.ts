@@ -53,16 +53,6 @@ export default defineConfig(({ command, mode }) => {
     },
 
     plugins: [
-      // https://github.com/posva/unplugin-vue-router
-      VueRoute({
-        routesFolder: 'src/pages',
-        extensions: ['.vue', '.tsx'],
-        /** files to exclude from router scan */
-        exclude: ['**/components/**', '*.component.tsx', '*.component.vue'],
-        dts: './src/types/typed-router.d.ts',
-        /** (filepath: string) => 'sync' | 'async' */
-        importMode: 'async'
-      }),
 
       // https://github.com/vue-macros/vue-macros
       VueMacros({
@@ -87,6 +77,17 @@ export default defineConfig(({ command, mode }) => {
           vueJsx: vueJsx({
             optimize: true,
             transformOn: true
+          }),
+
+          // https://github.com/posva/unplugin-vue-router
+          vueRouter: VueRoute({
+            routesFolder: 'src/pages',
+            extensions: ['.vue', '.tsx'],
+            /** files to exclude from router scan */
+            exclude: ['**/components/**', '*.component.tsx', '*.component.vue'],
+            dts: './src/types/typed-router.d.ts',
+            /** (filepath: string) => 'sync' | 'async' */
+            importMode: 'async'
           }),
         },
       }),

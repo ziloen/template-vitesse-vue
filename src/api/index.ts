@@ -1,5 +1,5 @@
 import axios from 'axios'
-import type { ZodTypeAny } from 'zod'
+import type { ZodType } from 'zod'
 import { message } from '~/utils'
 
 
@@ -11,7 +11,7 @@ const request = axios.create({
 })
 
 
-function validate(data: unknown, schema: ZodTypeAny | undefined) {
+function validate(data: unknown, schema: ZodType | undefined) {
   if (!schema) return
   const result = schema.safeParse(data)
   if (!result.success) {

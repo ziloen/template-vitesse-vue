@@ -1,12 +1,9 @@
 {
   "[json]": {
-    "editor.codeActionsOnSave": [
-      "source.sort.json",
-    ],
     "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[typescript]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "editor.defaultFormatter": "vscode.typescript-language-features"
   },
   // add @apply & @container to css atDirectives
   "css.customData": [
@@ -17,7 +14,7 @@
     "source.sortImports",
     // remove unused imports & sort imports
     // "source.organizeImports",
-    "source.fixAll.eslint",
+    // "source.fixAll.eslint",
   ],
   // due to this issue https://github.com/microsoft/vscode/issues/179355, we need to set this to top
   // "editor.snippetSuggestions": "top",
